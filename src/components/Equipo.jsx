@@ -20,7 +20,7 @@ const Equipo = () => {
         </ScrollReveal>
 
         {/* Grid de Miembros */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {contenido.equipo.miembros.map((miembro, index) => (
             <ScrollReveal key={index} delay={index * 0.15}>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">

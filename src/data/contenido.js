@@ -283,18 +283,6 @@ export const contenido = {
         foto: "/images/equipo/persona-2.jpg",
         linkedin: "https://linkedin.com/in/leonardo-wacs"
       },
-      {
-        nombre: "Dra. María Fernández",
-        cargo: "Contadora Senior",
-        descripcion: "Contadora Pública (UBA). Especialista en liquidación de impuestos y sueldos. Más de 15 años de experiencia en el estudio.",
-        foto: "/images/equipo/persona-3.jpg"
-      },
-      {
-        nombre: "Lic. Javier Martínez",
-        cargo: "Asistente Contable Senior",
-        descripcion: "Licenciado en Administración (UBA). Estudiante avanzado de Contador Público. Soporte en registración contable y gestión de declaraciones juradas.",
-        foto: "/images/equipo/persona-4.jpg"
-      },
     ]
   },
 
