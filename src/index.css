@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  
+  /* Paleta de colores basada en el logo Grande & Asociados */
+  --color-primary: #2C3E65;      /* Azul marino oscuro - letra G del logo */
+  --color-primary-dark: #1A2847; /* Azul muy oscuro - degradados */
+  --color-accent: #8B95A5;       /* Gris plateado - anillos y subtítulos */
+  --color-text-dark: #2B2B2B;    /* Negro/gris oscuro - texto principal */
+  --color-background: #F5F6F8;   /* Gris muy claro - fondos alternos */
+}
+
+/* Estilos personalizados */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Tipografía para encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Estilo para el scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2C3E65; /* Color del logo */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B95A5; /* Gris plateado del logo */
+}
