@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8 items-start">
           {/* Columna 1: Info del Estudio */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
+            <h3 className="text-white text-lg font-semibold mb-4">
               {contenido.estudio.nombre}
             </h3>
             <p className="text-gray-400 mb-4 text-justify">
@@ -52,7 +52,7 @@ const Footer = () => {
 
           {/* Columna 2: Servicios Rápidos */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4">Servicios</h4>
+            <h3 className="text-white text-lg font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2">
               {contenido.servicios.lista.slice(0, 6).map((servicio) => (
                 <li key={servicio.id}>
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* Columna 3: Contacto */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4">Contacto</h4>
+            <h3 className="text-white text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3 text-gray-400">
               <li>{contenido.estudio.direccion}</li>
               <li>
