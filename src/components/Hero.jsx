@@ -23,6 +23,14 @@ const Hero = () => {
 
       {/* Contenido */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in">
+        {/* Logo */}
+        <div className="flex justify-center mb-8">
+          <img
+            src="/images/logo.png"
+            alt={contenido.estudio.nombre}
+            className="h-48 w-auto drop-shadow-2xl animate-fade-in"
+          />
+        </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           {contenido.estudio.nombre}
         </h1>

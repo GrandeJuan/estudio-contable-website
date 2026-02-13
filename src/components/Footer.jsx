@@ -14,7 +14,7 @@ const Footer = () => {
               <img
                 src="/images/logo.png"
                 alt={contenido.estudio.nombre}
-                className="h-16 w-auto mr-3"
+                className="h-24 w-auto mr-3"
               />
             </div>
             <p className="text-gray-400 mb-4">
