@@ -1,8 +1,46 @@
-import { useState } from 'react';
-import { FaArrowLeft, FaCheckCircle, FaChevronDown, FaChevronUp, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { useState, useRef, useEffect } from 'react';
+import { FaArrowLeft, FaCheckCircle, FaChevronDown, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
+
+const FaqItem = ({ pregunta, respuesta, isOpen, onToggle }) => {
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (isOpen && contentRef.current) {
+      setHeight(contentRef.current.scrollHeight);
+    } else {
+      setHeight(0);
+    }
+  }, [isOpen]);
+
+  return (
+    <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+      <button
+        onClick={onToggle}
+        className="w-full px-6 py-5 flex justify-between items-center hover:bg-gray-50 transition-colors"
+      >
+        <h3 className="text-lg font-semibold text-[#2C3E65] text-left pr-4">
+          {pregunta}
+        </h3>
+        <FaChevronDown
+          className={`text-cta flex-shrink-0 transition-transform duration-400 ${isOpen ? 'rotate-180' : ''}`}
+        />
+      </button>
+      <div
+        ref={contentRef}
+        style={{ maxHeight: `${height}px` }}
+        className="overflow-hidden transition-all duration-400 ease-in-out"
+      >
+        <div className={`px-6 pb-5 border-t border-gray-100 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
+          <p className="text-gray-700 leading-relaxed text-justify pt-4">{respuesta}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const ServicioDetalle = ({ servicioId }) => {
   const [faqAbierto, setFaqAbierto] = useState(null);
@@ -107,26 +145,13 @@ const ServicioDetalle = ({ servicioId }) => {
                 <div className="w-16 h-1 bg-cta rounded mb-6"></div>
                 <div className="space-y-4">
                   {servicio.detalles.faqs.map((faq, index) => (
-                    <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                      <button
-                        onClick={() => toggleFaq(index)}
-                        className="w-full px-6 py-5 flex justify-between items-center hover:bg-gray-50 transition-colors"
-                      >
-                        <h3 className="text-lg font-semibold text-[#2C3E65] text-left pr-4">
-                          {faq.pregunta}
-                        </h3>
-                        {faqAbierto === index ? (
-                          <FaChevronUp className="text-cta flex-shrink-0" />
-                        ) : (
-                          <FaChevronDown className="text-cta flex-shrink-0" />
-                        )}
-                      </button>
-                      {faqAbierto === index && (
-                        <div className="px-6 pb-5 border-t border-gray-100">
-                          <p className="text-gray-700 leading-relaxed text-justify pt-4">{faq.respuesta}</p>
-                        </div>
-                      )}
-                    </div>
+                    <FaqItem
+                      key={index}
+                      pregunta={faq.pregunta}
+                      respuesta={faq.respuesta}
+                      isOpen={faqAbierto === index}
+                      onToggle={() => toggleFaq(index)}
+                    />
                   ))}
                 </div>
               </section>
