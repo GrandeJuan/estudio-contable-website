@@ -53,7 +53,7 @@ const Servicios = () => {
                   </h3>
 
                   {/* Descripción */}
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-justify">
                     {servicio.descripcion}
                   </p>
 

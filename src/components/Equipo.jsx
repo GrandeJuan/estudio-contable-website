@@ -43,7 +43,7 @@ const Equipo = () => {
                   <p className="text-[#8B95A5] font-semibold mb-3">
                     {miembro.cargo}
                   </p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
                     {miembro.descripcion}
                   </p>
 

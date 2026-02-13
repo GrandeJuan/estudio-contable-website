@@ -72,7 +72,7 @@ const ServicioDetalle = ({ servicioId }) => {
             {/* Descripción Detallada */}
             <section>
               <h2 className="text-3xl font-bold text-[#2C3E65] mb-6">Descripción del Servicio</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed text-justify">
                 {servicio.detalles.descripcionLarga}
               </p>
             </section>
@@ -113,7 +113,7 @@ const ServicioDetalle = ({ servicioId }) => {
                     </button>
                     {faqAbierto === index && (
                       <div className="px-6 pb-4">
-                        <p className="text-gray-700 leading-relaxed">{faq.respuesta}</p>
+                        <p className="text-gray-700 leading-relaxed text-justify">{faq.respuesta}</p>
                       </div>
                     )}
                   </div>
