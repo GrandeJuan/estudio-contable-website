@@ -67,8 +67,8 @@ const SobreNosotros = () => {
           {contenido.sobreNosotros.valores.map((valor, index) => {
             const IconoValor = iconos[valor.titulo] || FaHandshake;
             return (
-              <ScrollReveal key={index} delay={index * 0.15}>
-                <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <ScrollReveal key={index} delay={index * 0.15} className="h-full">
+                <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col items-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-[#8B95A5]/10 rounded-full mb-6 mx-auto">
                     <IconoValor className="text-3xl text-[#2C3E65]" />
                   </div>
