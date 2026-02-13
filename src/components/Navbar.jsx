@@ -60,7 +60,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 offset={-80}
-                className="cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-[#8B95A5]"
+                className="nav-link-underline cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-[#8B95A5]"
                 activeClass="!text-[#2C3E65] font-bold"
               >
                 {link.label}
