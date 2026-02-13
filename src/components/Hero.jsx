@@ -22,19 +22,19 @@ const Hero = () => {
       ></div>
 
       {/* Contenido */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1 className="hero-stagger hero-stagger-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           {contenido.estudio.nombre}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl font-light mb-8 text-gray-200">
+        <p className="hero-stagger hero-stagger-2 text-xl sm:text-2xl md:text-3xl font-light mb-8 text-gray-200">
           {contenido.estudio.slogan}
         </p>
-        <p className="text-base sm:text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
+        <p className="hero-stagger hero-stagger-3 text-base sm:text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
           {contenido.estudio.descripcionCorta}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="hero-stagger hero-stagger-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             to="contacto"
             spy={true}
