@@ -10,9 +10,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Columna 1: Info del Estudio */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
-              {contenido.estudio.nombre}
-            </h3>
+            <div className="flex items-center mb-4">
+              <img
+                src="/images/logo.png"
+                alt={contenido.estudio.nombre}
+                className="h-16 w-auto mr-3"
+              />
+            </div>
             <p className="text-gray-400 mb-4">
               {contenido.estudio.descripcionCorta}
             </p>

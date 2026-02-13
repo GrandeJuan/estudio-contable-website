@@ -40,12 +40,12 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className="cursor-pointer flex items-center space-x-3"
+              className="cursor-pointer flex items-center space-x-3 group"
             >
-              <img 
-                src="/images/logo.png" 
+              <img
+                src="/images/logo.png"
                 alt={contenido.estudio.nombre}
-                className="h-12 w-auto"
+                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
           </div>
