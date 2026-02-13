@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
 
           {/* Columna 2: Servicios Rápidos */}
-          <div>
+          <div className="justify-self-center">
             <h3 className="text-white text-lg font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2">
               {contenido.servicios.lista.slice(0, 6).map((servicio) => (
@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
 
           {/* Columna 3: Contacto */}
-          <div>
+          <div className="justify-self-end">
             <h3 className="text-white text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3 text-gray-400">
               <li>{contenido.estudio.direccion}</li>
