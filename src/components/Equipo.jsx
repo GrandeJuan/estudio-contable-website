@@ -37,17 +37,18 @@ const Equipo = () => {
 
                 {/* Información */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#2C3E65] mb-2">
+                  <h3 className="text-xl font-bold text-[#2C3E65] mb-2 text-center">
                     {miembro.nombre}
                   </h3>
-                  <p className="text-[#8B95A5] font-semibold mb-3">
+                  <p className="text-[#8B95A5] font-semibold mb-3 text-center">
                     {miembro.cargo}
                   </p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4 text-center">
                     {miembro.descripcion}
                   </p>
 
                   {miembro.linkedin && (
+                    <div className="text-center">
                     <a
                       href={miembro.linkedin}
                       target="_blank"
@@ -57,6 +58,7 @@ const Equipo = () => {
                       <FaLinkedin className="mr-2" />
                       <span className="text-sm font-medium">Ver perfil</span>
                     </a>
+                    </div>
                   )}
                 </div>
               </div>
