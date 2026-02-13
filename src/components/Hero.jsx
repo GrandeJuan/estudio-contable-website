@@ -40,7 +40,7 @@ const Hero = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="cursor-pointer bg-[#2C3E65] hover:bg-[#1A2847] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="cursor-pointer bg-cta hover:bg-cta-dark text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Contactanos
           </Link>
@@ -49,7 +49,7 @@ const Hero = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="cursor-pointer bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 border-2 border-white/30"
+            className="cursor-pointer bg-cta hover:bg-cta-dark text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Ver Servicios
           </Link>
