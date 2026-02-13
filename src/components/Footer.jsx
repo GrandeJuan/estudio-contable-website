@@ -7,13 +7,13 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8 items-start">
           {/* Columna 1: Info del Estudio */}
           <div>
             <h3 className="text-white text-xl font-bold mb-4">
               {contenido.estudio.nombre}
             </h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 mb-4 text-justify">
               {contenido.estudio.descripcionCorta}
             </p>
             <div className="flex space-x-4">
@@ -58,7 +58,7 @@ const Footer = () => {
                 <li key={servicio.id}>
                   <a
                     href={`#/servicio/${servicio.id}`}
-                    className="text-gray-400 hover:text-[#8B95A5] transition-colors"
+                    className="text-gray-400 hover:text-cta transition-colors"
                   >
                     {servicio.nombre}
                   </a>
@@ -75,15 +75,15 @@ const Footer = () => {
               <li>
                 <a 
                   href={`tel:${contenido.estudio.telefono.replace(/\s/g, '')}`}
-                  className="hover:text-[#8B95A5] transition-colors"
+                  className="hover:text-cta transition-colors"
                 >
                   {contenido.estudio.telefono}
                 </a>
               </li>
               <li>
-                <a 
+                <a
                   href={`mailto:${contenido.estudio.email}`}
-                  className="hover:text-[#8B95A5] transition-colors"
+                  className="hover:text-cta transition-colors"
                 >
                   {contenido.estudio.email}
                 </a>

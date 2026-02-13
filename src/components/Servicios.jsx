@@ -37,10 +37,10 @@ const Servicios = () => {
           {contenido.servicios.lista.map((servicio, index) => {
             const Icono = iconos[servicio.icono] || FaCalculator;
             return (
-              <ScrollReveal key={servicio.id} animation="scale-in" delay={index * 0.1}>
+              <ScrollReveal key={servicio.id} animation="scale-in" delay={index * 0.1} className="h-full">
                 <div
                   onClick={() => handleServiceClick(servicio.id)}
-                  className="group bg-white border-2 border-gray-100 rounded-lg p-8 hover:border-[#8B95A5] hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  className="group bg-white border-2 border-gray-100 rounded-lg p-8 hover:border-cta hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
                 >
                   {/* Icono */}
                   <div className="flex items-center justify-center w-16 h-16 bg-cta group-hover:bg-cta-dark rounded-lg mb-6 mx-auto transition-colors duration-300">
@@ -48,17 +48,17 @@ const Servicios = () => {
                   </div>
 
                   {/* Nombre del Servicio */}
-                  <h3 className="text-2xl font-bold text-[#2C3E65] mb-4 text-center group-hover:text-[#8B95A5] transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-[#2C3E65] mb-4 text-center group-hover:text-cta transition-colors duration-300">
                     {servicio.nombre}
                   </h3>
 
                   {/* Descripción */}
-                  <p className="text-gray-600 mb-6 leading-relaxed text-center">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-center flex-grow">
                     {servicio.descripcion}
                   </p>
 
                   {/* Link "Ver más" */}
-                  <div className="flex items-center justify-center text-[#8B95A5] font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                  <div className="flex items-center justify-center text-cta font-semibold group-hover:translate-x-2 transition-transform duration-300 mt-auto">
                     <span>Ver más detalles</span>
                     <FaArrowRight className="ml-2" />
                   </div>
