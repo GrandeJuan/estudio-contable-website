@@ -59,6 +59,33 @@ h1, h2, h3, h4, h5, h6 {
 .hero-stagger-3 { animation-delay: 0.8s; }
 .hero-stagger-4 { animation-delay: 1.1s; }
 
+/* Animaciones de scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-reveal.fade-up {
+  transform: translateY(40px);
+}
+
+.scroll-reveal.fade-left {
+  transform: translateX(-40px);
+}
+
+.scroll-reveal.fade-right {
+  transform: translateX(40px);
+}
+
+.scroll-reveal.scale-in {
+  transform: scale(0.92);
+}
+
+.scroll-reveal.scroll-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
 /* Subrayado animado en navbar */
 .nav-link-underline {
   position: relative;
