@@ -1,6 +1,7 @@
 import { FaHandshake, FaBriefcase, FaHeart } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
+import CountUp from './CountUp';
 
 const SobreNosotros = () => {
   const iconos = {
@@ -41,15 +42,15 @@ const SobreNosotros = () => {
               <div className="bg-[#2C3E65] rounded-lg p-8 shadow-xl">
                 <div className="grid grid-cols-2 gap-6 text-center text-white">
                   <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                    <div className="text-4xl font-bold text-cta mb-2">30+</div>
+                    <div className="text-4xl font-bold text-cta mb-2"><CountUp end={30} suffix="+" /></div>
                     <div className="text-sm">Años de Experiencia</div>
                   </div>
                   <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                    <div className="text-4xl font-bold text-cta mb-2">500+</div>
+                    <div className="text-4xl font-bold text-cta mb-2"><CountUp end={500} suffix="+" /></div>
                     <div className="text-sm">Clientes Satisfechos</div>
                   </div>
                   <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                    <div className="text-4xl font-bold text-cta mb-2">100%</div>
+                    <div className="text-4xl font-bold text-cta mb-2"><CountUp end={100} suffix="%" /></div>
                     <div className="text-sm">Compromiso</div>
                   </div>
                   <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
@@ -69,8 +70,8 @@ const SobreNosotros = () => {
             return (
               <ScrollReveal key={index} delay={index * 0.15} className="h-full">
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col items-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-[#8B95A5]/10 rounded-full mb-6 mx-auto">
-                    <IconoValor className="text-3xl text-[#2C3E65]" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-cta/10 rounded-full mb-6 mx-auto">
+                    <IconoValor className="text-3xl text-cta" />
                   </div>
                   <h3 className="text-2xl font-bold text-[#2C3E65] mb-4 text-center">
                     {valor.titulo}

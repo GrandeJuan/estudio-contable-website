@@ -43,7 +43,7 @@ const Servicios = () => {
                   className="group bg-white border-2 border-gray-100 rounded-lg p-8 hover:border-[#8B95A5] hover:shadow-2xl transition-all duration-300 cursor-pointer"
                 >
                   {/* Icono */}
-                  <div className="flex items-center justify-center w-16 h-16 bg-[#2C3E65] group-hover:bg-[#8B95A5] rounded-lg mb-6 mx-auto transition-colors duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-cta group-hover:bg-cta-dark rounded-lg mb-6 mx-auto transition-colors duration-300">
                     <Icono className="text-3xl text-white" />
                   </div>
 
