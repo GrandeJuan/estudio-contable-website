@@ -16,7 +16,7 @@ const SobreNosotros = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E65] mb-4">
             {contenido.sobreNosotros.titulo}
           </h2>
-          <div className="w-24 h-1 bg-[#8B95A5] mx-auto"></div>
+          <div className="w-24 h-1 bg-cta mx-auto"></div>
         </div>
 
         {/* Contenido */}
@@ -35,19 +35,19 @@ const SobreNosotros = () => {
             <div className="bg-[#2C3E65] rounded-lg p-8 shadow-xl">
               <div className="grid grid-cols-2 gap-6 text-center text-white">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                  <div className="text-4xl font-bold text-[#8B95A5] mb-2">30+</div>
+                  <div className="text-4xl font-bold text-cta mb-2">30+</div>
                   <div className="text-sm">Años de Experiencia</div>
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                  <div className="text-4xl font-bold text-[#8B95A5] mb-2">500+</div>
+                  <div className="text-4xl font-bold text-cta mb-2">500+</div>
                   <div className="text-sm">Clientes Satisfechos</div>
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                  <div className="text-4xl font-bold text-[#8B95A5] mb-2">100%</div>
+                  <div className="text-4xl font-bold text-cta mb-2">100%</div>
                   <div className="text-sm">Compromiso</div>
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                  <div className="text-4xl font-bold text-[#8B95A5] mb-2">24/7</div>
+                  <div className="text-4xl font-bold text-cta mb-2">24/7</div>
                   <div className="text-sm">Disponibilidad</div>
                 </div>
               </div>

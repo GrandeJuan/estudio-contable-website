@@ -53,7 +53,7 @@ const ServicioDetalle = ({ servicioId }) => {
           </button>
 
           <div className="flex items-center mb-6">
-            <div className="w-20 h-20 bg-[#8B95A5] rounded-lg flex items-center justify-center mr-6">
+            <div className="w-20 h-20 bg-cta rounded-lg flex items-center justify-center mr-6">
               <Icono className="text-4xl" />
             </div>
             <div>
@@ -84,7 +84,7 @@ const ServicioDetalle = ({ servicioId }) => {
                 <ul className="space-y-4">
                   {servicio.detalles.incluye.map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <FaCheckCircle className="text-[#8B95A5] mt-1 mr-3 flex-shrink-0" />
+                      <FaCheckCircle className="text-cta mt-1 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
                     </li>
                   ))}
@@ -147,7 +147,7 @@ const ServicioDetalle = ({ servicioId }) => {
 
                   <a
                     href={`mailto:${contenido.estudio.email}?subject=Consulta sobre ${servicio.nombre}`}
-                    className="flex items-center justify-center space-x-3 bg-[#2C3E65] hover:bg-[#2D3E5F] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-300 w-full"
+                    className="flex items-center justify-center space-x-3 bg-cta hover:bg-cta-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-300 w-full"
                   >
                     <FaEnvelope className="text-xl" />
                     <span>Enviar Email</span>

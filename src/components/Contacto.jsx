@@ -10,7 +10,7 @@ const Contacto = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             {contenido.contacto.titulo}
           </h2>
-          <div className="w-24 h-1 bg-[#8B95A5] mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-cta mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             {contenido.contacto.subtitulo}
           </p>
@@ -23,7 +23,7 @@ const Contacto = () => {
             
             {/* Dirección */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#8B95A5] rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-cta rounded-lg flex items-center justify-center">
                 <FaMapMarkerAlt className="text-xl" />
               </div>
               <div>
@@ -34,7 +34,7 @@ const Contacto = () => {
 
             {/* Teléfono */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#8B95A5] rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-cta rounded-lg flex items-center justify-center">
                 <FaPhone className="text-xl" />
               </div>
               <div>
@@ -50,7 +50,7 @@ const Contacto = () => {
 
             {/* Email */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#8B95A5] rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-cta rounded-lg flex items-center justify-center">
                 <FaEnvelope className="text-xl" />
               </div>
               <div>
@@ -66,7 +66,7 @@ const Contacto = () => {
 
             {/* Horario */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#8B95A5] rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 bg-cta rounded-lg flex items-center justify-center">
                 <FaClock className="text-xl" />
               </div>
               <div>

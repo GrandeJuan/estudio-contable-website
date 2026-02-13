@@ -10,7 +10,7 @@ const Equipo = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E65] mb-4">
             {contenido.equipo.titulo}
           </h2>
-          <div className="w-24 h-1 bg-[#8B95A5] mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-cta mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {contenido.equipo.subtitulo}
           </p>
