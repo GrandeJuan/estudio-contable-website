@@ -77,7 +77,7 @@ const Equipo = () => {
             ¿Querés formar parte de nuestro equipo?{' '}
             <a
               href={`mailto:${contenido.estudio.email}?subject=Consulta%20Laboral`}
-              className="text-[#8B95A5] hover:text-[#C09835] font-semibold underline"
+              className="text-[#8B95A5] hover:text-[#D4AF37] font-semibold underline"
             >
               Envianos tu CV
             </a>

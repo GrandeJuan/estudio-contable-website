@@ -15,7 +15,7 @@ const ServicioDetalle = ({ servicioId }) => {
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Servicio no encontrado</h2>
           <button
             onClick={() => window.location.hash = '#'}
-            className="bg-[#8B95A5] text-white px-6 py-3 rounded-lg hover:bg-[#C09835] transition-colors"
+            className="bg-[#8B95A5] text-white px-6 py-3 rounded-lg hover:bg-[#D4AF37] transition-colors"
           >
             Volver al inicio
           </button>
@@ -179,7 +179,7 @@ const ServicioDetalle = ({ servicioId }) => {
                 <a
                   href="#servicios"
                   onClick={() => window.location.hash = '#'}
-                  className="inline-block mt-4 text-[#8B95A5] hover:text-[#C09835] font-semibold"
+                  className="inline-block mt-4 text-[#8B95A5] hover:text-[#D4AF37] font-semibold"
                 >
                   Ver todos los servicios →
                 </a>
