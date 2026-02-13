@@ -40,22 +40,22 @@ const SobreNosotros = () => {
           <ScrollReveal animation="fade-left" delay={0.2}>
             <div className="relative">
               <div className="bg-[#2C3E65] rounded-lg p-8 shadow-xl">
-                <div className="grid grid-cols-2 gap-6 text-center text-white">
-                  <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                    <div className="text-4xl font-bold text-cta mb-2"><CountUp end={30} suffix="+" /></div>
-                    <div className="text-sm">Años de Experiencia</div>
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center text-white">
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
+                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={30} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm">Años de Experiencia</div>
                   </div>
-                  <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                    <div className="text-4xl font-bold text-cta mb-2"><CountUp end={500} suffix="+" /></div>
-                    <div className="text-sm">Clientes Satisfechos</div>
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
+                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={500} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm">Clientes Satisfechos</div>
                   </div>
-                  <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                    <div className="text-4xl font-bold text-cta mb-2"><CountUp end={100} suffix="%" /></div>
-                    <div className="text-sm">Compromiso</div>
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
+                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={100} suffix="%" /></div>
+                    <div className="text-xs sm:text-sm">Compromiso</div>
                   </div>
-                  <div className="bg-white/10 p-6 rounded-lg backdrop-blur">
-                    <div className="text-4xl font-bold text-cta mb-2">24/7</div>
-                    <div className="text-sm">Disponibilidad</div>
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
+                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2">24/7</div>
+                    <div className="text-xs sm:text-sm">Disponibilidad</div>
                   </div>
                 </div>
               </div>

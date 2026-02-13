@@ -131,7 +131,7 @@ const Contacto = () => {
 
           {/* Mapa */}
           <ScrollReveal animation="fade-left" delay={0.2}>
-            <div className="h-[500px] rounded-lg overflow-hidden shadow-2xl">
+            <div className="h-[300px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <iframe
                 src={contenido.contacto.mapaEmbedUrl}
                 width="100%"

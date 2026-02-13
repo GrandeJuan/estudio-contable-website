@@ -91,14 +91,14 @@ const ServicioDetalle = ({ servicioId }) => {
             Volver al inicio
           </button>
 
-          <div className="flex items-center mb-6">
-            <div className="w-20 h-20 bg-cta rounded-lg flex items-center justify-center mr-6 shadow-lg shadow-cta/30">
-              <Icono className="text-4xl text-white" />
+          <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-cta rounded-lg flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 shadow-lg shadow-cta/30">
+              <Icono className="text-3xl sm:text-4xl text-white" />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">{servicio.nombre}</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">{servicio.nombre}</h1>
               <div className="w-20 h-1 bg-cta rounded mb-3"></div>
-              <p className="text-xl text-gray-300">{servicio.descripcion}</p>
+              <p className="text-base sm:text-xl text-gray-300">{servicio.descripcion}</p>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ const ServicioDetalle = ({ servicioId }) => {
             {/* Descripción Detallada */}
             <ScrollReveal>
               <section>
-                <h2 className="text-3xl font-bold text-[#2C3E65] mb-6">Descripción del Servicio</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3E65] mb-6">Descripción del Servicio</h2>
                 <div className="w-16 h-1 bg-cta rounded mb-6"></div>
                 <p className="text-gray-700 text-lg leading-relaxed text-justify">
                   {servicio.detalles.descripcionLarga}
@@ -123,7 +123,7 @@ const ServicioDetalle = ({ servicioId }) => {
             {/* Qué Incluye */}
             <ScrollReveal delay={0.1}>
               <section>
-                <h2 className="text-3xl font-bold text-[#2C3E65] mb-6">¿Qué Incluye Este Servicio?</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3E65] mb-6">¿Qué Incluye Este Servicio?</h2>
                 <div className="w-16 h-1 bg-cta rounded mb-6"></div>
                 <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
                   <ul className="space-y-4">
@@ -141,7 +141,7 @@ const ServicioDetalle = ({ servicioId }) => {
             {/* Preguntas Frecuentes */}
             <ScrollReveal delay={0.2}>
               <section>
-                <h2 className="text-3xl font-bold text-[#2C3E65] mb-6">Preguntas Frecuentes</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#2C3E65] mb-6">Preguntas Frecuentes</h2>
                 <div className="w-16 h-1 bg-cta rounded mb-6"></div>
                 <div className="space-y-4">
                   {servicio.detalles.faqs.map((faq, index) => (

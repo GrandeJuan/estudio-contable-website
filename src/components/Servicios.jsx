@@ -40,7 +40,7 @@ const Servicios = () => {
               <ScrollReveal key={servicio.id} animation="scale-in" delay={index * 0.1} className="h-full">
                 <div
                   onClick={() => handleServiceClick(servicio.id)}
-                  className="group bg-white border-2 border-gray-100 rounded-lg p-8 hover:border-cta hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
+                  className="group bg-white border-2 border-gray-100 rounded-lg p-6 sm:p-8 hover:border-cta hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
                 >
                   {/* Icono */}
                   <div className="flex items-center justify-center w-16 h-16 bg-cta group-hover:bg-cta-dark rounded-lg mb-6 mx-auto transition-colors duration-300">
@@ -48,7 +48,7 @@ const Servicios = () => {
                   </div>
 
                   {/* Nombre del Servicio */}
-                  <h3 className="text-2xl font-bold text-[#2C3E65] mb-4 text-center group-hover:text-cta transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#2C3E65] mb-4 text-center group-hover:text-cta transition-colors duration-300">
                     {servicio.nombre}
                   </h3>
 
