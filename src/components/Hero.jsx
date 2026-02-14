@@ -24,7 +24,7 @@ const Hero = ({ onConsultar }) => {
       {/* Contenido */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="hero-stagger hero-stagger-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          {contenido.estudio.nombre}
+          Estudio Contable<br />Grande &amp; Asociados
         </h1>
         <p className="hero-stagger hero-stagger-2 text-xl sm:text-2xl md:text-3xl font-light mb-8 text-gray-200">
           {contenido.estudio.slogan}
