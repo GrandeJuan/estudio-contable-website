@@ -101,9 +101,9 @@ const Contacto = () => {
               </div>
 
               {/* Redes Sociales */}
-              <div className="pt-6">
+              <div className="pt-6 text-center">
                 <h4 className="font-semibold text-lg mb-4">Seguinos en Redes</h4>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 justify-center">
                   {contenido.estudio.redesSociales.instagram && (
                     <a
                       href={contenido.estudio.redesSociales.instagram}
