@@ -70,14 +70,14 @@ const Equipo = () => {
         <ScrollReveal delay={0.2}>
           <div className="mt-16 text-center">
             <p className="text-gray-600 text-lg">
-              ¿Querés formar parte de nuestro equipo?{' '}
-              <a
-                href={`mailto:${contenido.estudio.email}?subject=Consulta%20Laboral`}
-                className="text-[#8B95A5] hover:text-[#C09835] font-semibold underline"
-              >
-                Envianos tu CV
-              </a>
+              ¿Querés formar parte de nuestro equipo?
             </p>
+            <a
+              href={`mailto:${contenido.estudio.email}?subject=Consulta%20Laboral`}
+              className="inline-block mt-2 text-[#1a3a5c] hover:text-[#C09835] font-bold text-lg underline underline-offset-4 transition-colors"
+            >
+              Envianos tu CV
+            </a>
           </div>
         </ScrollReveal>
       </div>
