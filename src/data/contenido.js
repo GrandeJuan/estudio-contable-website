@@ -5,8 +5,8 @@ export const contenido = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   estudio: {
     nombre: "Estudio Contable Grande & Asociados",
-    slogan: "Soluciones contables a tu medida",
-    descripcionCorta: "Más de 30 años acompañando a empresas y particulares con servicios contables, impositivos y de asesoría integral.",
+    slogan: "Soluciones a tu medida",
+    descripcionCorta: "Más de 30 años asesorando a empresas y particulares con servicios de auditoría, impuestos, sociedades y liquidación de sueldos.",
     telefono: "+54 11 4567-8900",
     email: "info@estudiogrande.com.ar",
     direccion: "Av. Corrientes 1234, Piso 5, CABA, Argentina",
