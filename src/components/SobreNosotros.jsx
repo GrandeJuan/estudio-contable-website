@@ -50,6 +50,14 @@ const SobreNosotros = () => {
                     <div className="text-xs sm:text-sm">Clientes Satisfechos</div>
                   </div>
                   <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
+                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={200} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm">Empresas Asesoradas</div>
+                  </div>
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
+                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={3000} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm">Trámites Anuales</div>
+                  </div>
+                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
                     <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={100} suffix="%" /></div>
                     <div className="text-xs sm:text-sm">Compromiso</div>
                   </div>
