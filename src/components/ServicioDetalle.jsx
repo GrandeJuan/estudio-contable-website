@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { FaArrowLeft, FaCheckCircle, FaChevronDown, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaChevronDown, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
@@ -74,6 +74,11 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
 
   const Icono = iconos[servicio.icono] || FaCalculator;
 
+  const lista = contenido.servicios.lista;
+  const currentIndex = lista.findIndex(s => s.id === servicioId);
+  const prevServicio = lista[(currentIndex - 1 + lista.length) % lista.length];
+  const nextServicio = lista[(currentIndex + 1) % lista.length];
+
   const toggleFaq = (index) => {
     setFaqAbierto(faqAbierto === index ? null : index);
   };
@@ -83,13 +88,22 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
       {/* Header del Servicio */}
       <div className="bg-gradient-to-r from-[#2C3E65] to-[#1a2a4a] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <button
-            onClick={() => window.location.hash = '#'}
-            className="flex items-center text-white/80 hover:text-cta mb-8 transition-colors"
-          >
-            <FaArrowLeft className="mr-2" />
-            Volver al inicio
-          </button>
+          <div className="flex justify-between items-center mb-8">
+            <a
+              href={`#/servicio/${prevServicio.id}`}
+              className="flex items-center text-white/80 hover:text-cta transition-colors group"
+            >
+              <FaArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" />
+              <span className="hidden sm:inline">{prevServicio.nombre}</span>
+            </a>
+            <a
+              href={`#/servicio/${nextServicio.id}`}
+              className="flex items-center text-white/80 hover:text-cta transition-colors group"
+            >
+              <span className="hidden sm:inline">{nextServicio.nombre}</span>
+              <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6">
             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-cta rounded-lg flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 shadow-lg shadow-cta/30">
