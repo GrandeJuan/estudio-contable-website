@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 import { contenido } from '../data/contenido';
 
-const Hero = () => {
+const Hero = ({ onConsultar }) => {
   return (
     <section
       id="inicio"
@@ -35,15 +35,12 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="hero-stagger hero-stagger-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            to="contacto"
-            spy={true}
-            smooth={true}
-            duration={500}
+          <button
+            onClick={onConsultar}
             className="cursor-pointer bg-cta hover:bg-cta-dark text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Contactanos
-          </Link>
+          </button>
           <Link
             to="servicios"
             spy={true}

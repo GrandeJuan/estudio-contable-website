@@ -42,7 +42,7 @@ const FaqItem = ({ pregunta, respuesta, isOpen, onToggle }) => {
   );
 };
 
-const ServicioDetalle = ({ servicioId }) => {
+const ServicioDetalle = ({ servicioId, onConsultar }) => {
   const [faqAbierto, setFaqAbierto] = useState(null);
 
   const servicio = contenido.servicios.lista.find(s => s.id === servicioId);
@@ -171,25 +171,13 @@ const ServicioDetalle = ({ servicioId }) => {
                     Contactanos para recibir una cotización personalizada y sin compromiso.
                   </p>
 
-                  <div className="space-y-4">
-                    <a
-                      href={contenido.estudio.redesSociales.whatsapp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center space-x-3 bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-300 w-full"
-                    >
-                      <FaWhatsapp className="text-xl" />
-                      <span>Consultar por WhatsApp</span>
-                    </a>
-
-                    <a
-                      href={`mailto:${contenido.estudio.email}?subject=Consulta sobre ${servicio.nombre}`}
-                      className="flex items-center justify-center space-x-3 bg-cta hover:bg-cta-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-300 w-full"
-                    >
-                      <FaEnvelope className="text-xl" />
-                      <span>Enviar Email</span>
-                    </a>
-                  </div>
+                  <button
+                    onClick={onConsultar}
+                    className="flex items-center justify-center space-x-3 bg-cta hover:bg-cta-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-300 w-full"
+                  >
+                    <FaEnvelope className="text-xl" />
+                    <span>Hacenos tu consulta</span>
+                  </button>
                 </div>
               </ScrollReveal>
 

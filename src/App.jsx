@@ -7,15 +7,17 @@ import Equipo from './components/Equipo';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import ServicioDetalle from './components/ServicioDetalle';
+import ConsultaModal from './components/ConsultaModal';
 
 function App() {
   const [currentView, setCurrentView] = useState({ type: 'home' });
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     // Función para manejar cambios en el hash
     const handleHashChange = () => {
       const hash = window.location.hash;
-      
+
       if (hash.startsWith('#/servicio/')) {
         const servicioId = hash.replace('#/servicio/', '');
         setCurrentView({ type: 'servicio', servicioId });
@@ -36,15 +38,19 @@ function App() {
     };
   }, []);
 
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   // Vista de página de servicio individual
   if (currentView.type === 'servicio') {
     return (
       <div className="font-sans">
         <Navbar />
         <div className="pt-20">
-          <ServicioDetalle servicioId={currentView.servicioId} />
+          <ServicioDetalle servicioId={currentView.servicioId} onConsultar={openModal} />
         </div>
         <Footer />
+        <ConsultaModal isOpen={modalOpen} onClose={closeModal} />
       </div>
     );
   }
@@ -53,12 +59,13 @@ function App() {
   return (
     <div className="font-sans">
       <Navbar />
-      <Hero />
+      <Hero onConsultar={openModal} />
       <SobreNosotros />
       <Servicios />
       <Equipo />
-      <Contacto />
+      <Contacto onConsultar={openModal} />
       <Footer />
+      <ConsultaModal isOpen={modalOpen} onClose={closeModal} />
     </div>
   );
 }

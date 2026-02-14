@@ -2,7 +2,7 @@ import { FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaInstagram, 
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
 
-const Contacto = () => {
+const Contacto = ({ onConsultar }) => {
   return (
     <section id="contacto" className="py-20 bg-[#2C3E65] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,13 +94,13 @@ const Contacto = () => {
                   <span>{contenido.contacto.textoWhatsapp}</span>
                 </a>
 
-                <a
-                  href={`mailto:${contenido.estudio.email}`}
+                <button
+                  onClick={onConsultar}
                   className="flex items-center justify-center space-x-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 border-2 border-white/30 w-full"
                 >
                   <FaEnvelope className="text-xl" />
-                  <span>{contenido.contacto.textoEmail}</span>
-                </a>
+                  <span>Dejanos tu consulta</span>
+                </button>
               </div>
             </div>
           </ScrollReveal>
