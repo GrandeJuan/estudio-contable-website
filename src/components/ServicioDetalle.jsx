@@ -244,7 +244,7 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
                         {contenido.estudio.email}
                       </a>
                     </p>
-                    <p className="text-gray-300 pt-2">{contenido.estudio.horario}</p>
+                    <p>{contenido.estudio.horario}</p>
                   </div>
                 </div>
               </ScrollReveal>
