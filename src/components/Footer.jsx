@@ -100,7 +100,7 @@ const Footer = () => {
               © {currentYear} {contenido.estudio.nombre}. Todos los derechos reservados.
             </p>
             <p className="mt-2">
-              Desarrollado con ❤️ para profesionales contables
+              Desarrollado con ❤️ por Juan Grande
             </p>
           </div>
         </div>
