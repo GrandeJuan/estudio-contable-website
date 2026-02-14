@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown, FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
+
+const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar };
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -103,15 +105,19 @@ const Navbar = () => {
                   {/* Dropdown */}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 min-w-[240px]">
-                      {contenido.servicios.lista.map((servicio) => (
-                        <a
-                          key={servicio.id}
-                          href={`#/servicio/${servicio.id}`}
-                          className="block px-5 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-cta transition-colors"
-                        >
-                          {servicio.nombre}
-                        </a>
-                      ))}
+                      {contenido.servicios.lista.map((servicio) => {
+                        const Icono = iconos[servicio.icono] || FaCalculator;
+                        return (
+                          <a
+                            key={servicio.id}
+                            href={`#/servicio/${servicio.id}`}
+                            className="flex items-center gap-3 px-5 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-cta transition-colors"
+                          >
+                            <Icono className="text-cta/70 flex-shrink-0" />
+                            {servicio.nombre}
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -179,16 +185,20 @@ const Navbar = () => {
                     </Link>
                   )}
                   <div className="ml-4 mt-2 space-y-2 border-l-2 border-cta/30 pl-3">
-                    {contenido.servicios.lista.map((servicio) => (
-                      <a
-                        key={servicio.id}
-                        href={`#/servicio/${servicio.id}`}
-                        onClick={() => setMenuOpen(false)}
-                        className="block text-sm text-gray-600 hover:text-cta transition-colors"
-                      >
-                        {servicio.nombre}
-                      </a>
-                    ))}
+                    {contenido.servicios.lista.map((servicio) => {
+                      const Icono = iconos[servicio.icono] || FaCalculator;
+                      return (
+                        <a
+                          key={servicio.id}
+                          href={`#/servicio/${servicio.id}`}
+                          onClick={() => setMenuOpen(false)}
+                          className="flex items-center gap-2 text-sm text-gray-600 hover:text-cta transition-colors"
+                        >
+                          <Icono className="text-cta/70 flex-shrink-0 text-xs" />
+                          {servicio.nombre}
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               ) : isServicePage ? (
