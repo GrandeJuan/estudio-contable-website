@@ -1,5 +1,7 @@
-import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
+
+const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar };
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -54,16 +56,20 @@ const Footer = () => {
           <div className="md:justify-self-center">
             <h3 className="text-white text-lg font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2">
-              {contenido.servicios.lista.slice(0, 6).map((servicio) => (
-                <li key={servicio.id}>
-                  <a
-                    href={`#/servicio/${servicio.id}`}
-                    className="text-gray-400 hover:text-cta transition-colors"
-                  >
-                    {servicio.nombre}
-                  </a>
-                </li>
-              ))}
+              {contenido.servicios.lista.slice(0, 6).map((servicio) => {
+                const Icono = iconos[servicio.icono] || FaCalculator;
+                return (
+                  <li key={servicio.id}>
+                    <a
+                      href={`#/servicio/${servicio.id}`}
+                      className="flex items-center gap-2 text-gray-400 hover:text-cta transition-colors"
+                    >
+                      <Icono className="text-cta/50 flex-shrink-0 text-xs" />
+                      {servicio.nombre}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
