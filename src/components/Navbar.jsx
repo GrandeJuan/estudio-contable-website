@@ -54,8 +54,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
         scrolled
-          ? 'bg-white/50 backdrop-blur-md shadow-lg py-3'
-          : 'bg-white py-4'
+          ? 'bg-cta/95 backdrop-blur-md shadow-lg py-3'
+          : 'bg-cta py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +83,7 @@ const Navbar = () => {
                   {isServicePage ? (
                     <button
                       onClick={() => handleNavClick(link.to)}
-                      className="nav-link-underline cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta flex items-center gap-1"
+                      className="nav-link-underline cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65] flex items-center gap-1"
                     >
                       {link.label}
                       <FaChevronDown className="text-xs transition-transform group-hover:rotate-180" />
@@ -95,8 +95,8 @@ const Navbar = () => {
                       smooth={true}
                       duration={500}
                       offset={-80}
-                      className="nav-link-underline cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta flex items-center gap-1"
-                      activeClass="!text-cta font-bold"
+                      className="nav-link-underline cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65] flex items-center gap-1"
+                      activeClass="!text-[#2C3E65] font-bold"
                     >
                       {link.label}
                       <FaChevronDown className="text-xs transition-transform group-hover:rotate-180" />
@@ -125,7 +125,7 @@ const Navbar = () => {
                 <button
                   key={link.to}
                   onClick={() => handleNavClick(link.to)}
-                  className="nav-link-underline cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta"
+                  className="nav-link-underline cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65]"
                 >
                   {link.label}
                 </button>
@@ -137,8 +137,8 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="nav-link-underline cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta"
-                  activeClass="!text-cta font-bold"
+                  className="nav-link-underline cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65]"
+                  activeClass="!text-[#2C3E65] font-bold"
                 >
                   {link.label}
                 </Link>
@@ -150,7 +150,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl text-[#2C3E65]"
+              className="text-2xl text-white"
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -166,7 +166,7 @@ const Navbar = () => {
                   {isServicePage ? (
                     <button
                       onClick={() => handleNavClick(link.to)}
-                      className="block cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta"
+                      className="block cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65]"
                     >
                       {link.label}
                     </button>
@@ -178,13 +178,13 @@ const Navbar = () => {
                       duration={500}
                       offset={-80}
                       onClick={() => setMenuOpen(false)}
-                      className="block cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta"
-                      activeClass="!text-cta font-bold"
+                      className="block cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65]"
+                      activeClass="!text-[#2C3E65] font-bold"
                     >
                       {link.label}
                     </Link>
                   )}
-                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-cta/30 pl-3">
+                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-white/40 pl-3">
                     {contenido.servicios.lista.map((servicio) => {
                       const Icono = iconos[servicio.icono] || FaCalculator;
                       return (
@@ -192,9 +192,9 @@ const Navbar = () => {
                           key={servicio.id}
                           href={`#/servicio/${servicio.id}`}
                           onClick={() => setMenuOpen(false)}
-                          className="flex items-center gap-2 text-sm text-gray-600 hover:text-cta transition-colors"
+                          className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
                         >
-                          <Icono className="text-cta/70 flex-shrink-0 text-xs" />
+                          <Icono className="text-white/70 flex-shrink-0 text-xs" />
                           {servicio.nombre}
                         </a>
                       );
@@ -205,7 +205,7 @@ const Navbar = () => {
                 <button
                   key={link.to}
                   onClick={() => handleNavClick(link.to)}
-                  className="block cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta"
+                  className="block cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65]"
                 >
                   {link.label}
                 </button>
@@ -218,8 +218,8 @@ const Navbar = () => {
                   duration={500}
                   offset={-80}
                   onClick={() => setMenuOpen(false)}
-                  className="block cursor-pointer font-medium transition-colors text-[#2C3E65] hover:text-cta"
-                  activeClass="!text-cta font-bold"
+                  className="block cursor-pointer font-medium transition-colors text-white hover:text-[#2C3E65]"
+                  activeClass="!text-[#2C3E65] font-bold"
                 >
                   {link.label}
                 </Link>
