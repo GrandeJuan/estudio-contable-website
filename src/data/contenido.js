@@ -7,15 +7,15 @@ export const contenido = {
     nombre: "Estudio Contable Grande & Asociados",
     slogan: "Soluciones a tu medida",
     descripcionCorta: "Más de 30 años asesorando a empresas y particulares. Servicios de auditoría, impuestos, sociedades y liquidación de sueldos.",
-    telefono: "+54 11 4567-8900",
-    email: "info@estudiogrande.com.ar",
-    direccion: "Av. Corrientes 1234, Piso 5, CABA, Argentina",
-    horario: "Lunes a Viernes de 9:00 a 18:00 hs",
-    googleMapsUrl: "https://maps.google.com/?q=Av.+Corrientes+1234+CABA",
+    telefono: "+54 11 4382-7139",
+    email: "recepcion@grandeyasoc.com.ar",
+    direccion: "Av. Corrientes 1257, 3° F, Primer Cuerpo, CABA",
+    horario: "Lunes a Viernes de 9:00 a 17:00 hs",
+    googleMapsUrl: "https://maps.google.com/?q=Av.+Corrientes+1257+CABA",
     redesSociales: {
       instagram: "https://instagram.com/estudiogrande",
       linkedin: "https://linkedin.com/company/estudio-grande",
-      whatsapp: "https://wa.me/541145678900",
+      whatsapp: "https://wa.me/541143827139",
     }
   },
 
@@ -294,6 +294,6 @@ export const contenido = {
     subtitulo: "Estamos para ayudarte. Escribinos o acercate al estudio.",
     textoWhatsapp: "Envianos un WhatsApp",
     textoEmail: "Escribinos un email",
-    mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168878493973!2d-58.38375908477063!3d-34.60373098045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf7296f4d9%3A0x8b0e6f1b5e6a5e6a!2sAv.%20Corrientes%201234%2C%20C1043%20CABA!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar"
+    mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168878493973!2d-58.38375908477063!3d-34.60373098045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf7296f4d9%3A0x8b0e6f1b5e6a5e6a!2sAv.%20Corrientes%201257%2C%20CABA!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar"
   }
 };
