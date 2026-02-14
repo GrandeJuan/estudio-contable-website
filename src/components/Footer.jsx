@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-4 text-justify">
               {contenido.estudio.descripcionCorta}
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               {contenido.estudio.redesSociales.instagram && (
                 <a
                   href={contenido.estudio.redesSociales.instagram}
