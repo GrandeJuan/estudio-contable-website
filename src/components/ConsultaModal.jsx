@@ -128,7 +128,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#2C3E65] to-[#1a2a4a] text-white p-6 rounded-t-xl sticky top-0 z-10">
+        <div className="bg-gradient-to-r from-[#2C3E65] to-[#1a2a4a] text-white p-6 sticky top-0 z-10">
           <button
             onClick={handleClose}
             className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
