@@ -88,7 +88,7 @@ const Footer = () => {
                   {contenido.estudio.email}
                 </a>
               </li>
-              <li className="text-sm pt-2">{contenido.estudio.horario}</li>
+              <li>{contenido.estudio.horario}</li>
             </ul>
           </div>
         </div>
