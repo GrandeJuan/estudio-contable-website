@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 
 const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar };
@@ -77,24 +77,32 @@ const Footer = () => {
           <div className="md:justify-self-end">
             <h3 className="text-white text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3 text-gray-400">
-              <li>{contenido.estudio.direccion}</li>
+              <li className="flex items-center gap-2">
+                <FaMapMarkerAlt className="text-cta/50 flex-shrink-0" />
+                {contenido.estudio.direccion}
+              </li>
               <li>
-                <a 
+                <a
                   href={`tel:${contenido.estudio.telefono.replace(/\s/g, '')}`}
-                  className="hover:text-cta transition-colors"
+                  className="flex items-center gap-2 hover:text-cta transition-colors"
                 >
+                  <FaPhone className="text-cta/50 flex-shrink-0" />
                   {contenido.estudio.telefono}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${contenido.estudio.email}`}
-                  className="hover:text-cta transition-colors"
+                  className="flex items-center gap-2 hover:text-cta transition-colors"
                 >
+                  <FaEnvelope className="text-cta/50 flex-shrink-0" />
                   {contenido.estudio.email}
                 </a>
               </li>
-              <li>{contenido.estudio.horario}</li>
+              <li className="flex items-center gap-2">
+                <FaClock className="text-cta/50 flex-shrink-0" />
+                {contenido.estudio.horario}
+              </li>
             </ul>
           </div>
         </div>
