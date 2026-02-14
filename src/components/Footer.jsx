@@ -24,9 +24,9 @@ const Footer = () => {
                   href={contenido.estudio.redesSociales.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#E4405F] text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
-                  <FaInstagram className="text-2xl" />
+                  <FaInstagram className="text-xl" />
                 </a>
               )}
               {contenido.estudio.redesSociales.linkedin && (
@@ -34,9 +34,9 @@ const Footer = () => {
                   href={contenido.estudio.redesSociales.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#0077B5] text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
-                  <FaLinkedin className="text-2xl" />
+                  <FaLinkedin className="text-xl" />
                 </a>
               )}
               {contenido.estudio.redesSociales.whatsapp && (
@@ -44,9 +44,9 @@ const Footer = () => {
                   href={contenido.estudio.redesSociales.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#25D366] text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
-                  <FaWhatsapp className="text-2xl" />
+                  <FaWhatsapp className="text-xl" />
                 </a>
               )}
             </div>
