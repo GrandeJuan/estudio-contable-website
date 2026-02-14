@@ -36,7 +36,7 @@ export const contenido = {
       },
       { 
         titulo: "Profesionalismo", 
-        descripcion: "Equipo actualizado en normativa contable e impositiva vigente. Capacitación continua para brindar el mejor servicio." 
+        descripcion: "Equipo actualizado en normativa contable, impositiva y laboral vigente. Nos capacitamos continuamente para brindar el mejor servicio."
       },
       { 
         titulo: "Compromiso", 
