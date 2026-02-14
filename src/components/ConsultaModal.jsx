@@ -47,8 +47,12 @@ const ConsultaModal = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
+  const MENSAJE_MAX = 500;
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    if (name === 'mensaje' && value.length > MENSAJE_MAX) return;
+    setFormData({ ...formData, [name]: value });
     setError('');
   };
 
@@ -112,19 +116,19 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4"
       onClick={handleClose}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Modal */}
       <div
-        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto"
+        className="relative bg-white rounded-t-xl sm:rounded-xl shadow-2xl w-full sm:max-w-lg max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#2C3E65] to-[#1a2a4a] text-white p-6 rounded-t-2xl">
+        <div className="bg-gradient-to-r from-[#2C3E65] to-[#1a2a4a] text-white p-6 rounded-t-xl sticky top-0 z-10">
           <button
             onClick={handleClose}
             className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
@@ -234,9 +238,13 @@ const ConsultaModal = ({ isOpen, onClose }) => {
                   value={formData.mensaje}
                   onChange={handleChange}
                   rows={4}
+                  maxLength={MENSAJE_MAX}
                   placeholder="Contanos en qué podemos ayudarte..."
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-cta focus:outline-none transition-colors resize-none text-gray-800"
                 />
+                <p className="text-xs text-gray-400 text-right mt-1">
+                  {formData.mensaje.length}/{MENSAJE_MAX} caracteres
+                </p>
               </div>
 
               {/* Error */}
