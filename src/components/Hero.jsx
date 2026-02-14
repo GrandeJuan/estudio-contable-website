@@ -30,7 +30,9 @@ const Hero = ({ onConsultar }) => {
           {contenido.estudio.slogan}
         </p>
         <p className="hero-stagger hero-stagger-3 text-base sm:text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
-          {contenido.estudio.descripcionCorta}
+          Más de 30 años asesorando a empresas y particulares.
+          <br />
+          Servicios de auditoría, impuestos, sociedades y liquidación de sueldos.
         </p>
 
         {/* CTA Buttons */}
