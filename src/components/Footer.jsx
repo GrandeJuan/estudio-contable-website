@@ -100,7 +100,7 @@ const Footer = () => {
               © {currentYear} {contenido.estudio.nombre}. Todos los derechos reservados.
             </p>
             <p className="mt-2">
-              Desarrollado con ❤️ por Juan Grande
+              Desarrollado con ❤️ por <a href="https://www.linkedin.com/in/juan-francisco-grande/" target="_blank" rel="noopener noreferrer" className="hover:text-cta transition-colors underline">Juan Grande</a>
             </p>
           </div>
         </div>
