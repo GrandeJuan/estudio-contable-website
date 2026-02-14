@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { FaTimes, FaWhatsapp, FaEnvelope, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
 import { contenido } from '../data/contenido';
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -65,18 +64,23 @@ const ConsultaModal = ({ isOpen, onClose }) => {
     setError('');
 
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.nombre,
-          from_email: formData.email,
-          telefono: formData.telefono || 'No proporcionado',
-          motivo: formData.motivo,
-          mensaje: formData.mensaje,
-        },
-        EMAILJS_PUBLIC_KEY
-      );
+      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: formData.nombre,
+            from_email: formData.email,
+            telefono: formData.telefono || 'No proporcionado',
+            motivo: formData.motivo,
+            mensaje: formData.mensaje,
+          },
+        }),
+      });
+      if (!res.ok) throw new Error('Error al enviar');
       setEnviado(true);
     } catch {
       setError('Hubo un error al enviar. Podés intentar de nuevo o escribirnos por email.');
