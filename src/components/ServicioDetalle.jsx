@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaChevronDown, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaChevronDown, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaClock } from 'react-icons/fa';
 import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
@@ -232,19 +232,27 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
                 <div className="bg-gradient-to-br from-[#2C3E65] to-[#1a2a4a] text-white rounded-xl shadow-lg p-8">
                   <h3 className="text-xl font-bold mb-4">Información de Contacto</h3>
                   <div className="w-12 h-1 bg-cta rounded mb-4"></div>
-                  <div className="space-y-3 text-sm">
-                    <p>{contenido.estudio.direccion}</p>
-                    <p>
+                  <div className="space-y-4 text-sm">
+                    <div className="flex items-start gap-3">
+                      <FaMapMarkerAlt className="text-cta mt-0.5 flex-shrink-0" />
+                      <span>{contenido.estudio.direccion}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <FaPhoneAlt className="text-cta flex-shrink-0" />
                       <a href={`tel:${contenido.estudio.telefono.replace(/\s/g, '')}`} className="hover:text-cta transition-colors">
                         {contenido.estudio.telefono}
                       </a>
-                    </p>
-                    <p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <FaEnvelope className="text-cta flex-shrink-0" />
                       <a href={`mailto:${contenido.estudio.email}`} className="hover:text-cta transition-colors">
                         {contenido.estudio.email}
                       </a>
-                    </p>
-                    <p>{contenido.estudio.horario}</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <FaClock className="text-cta flex-shrink-0" />
+                      <span>{contenido.estudio.horario}</span>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
