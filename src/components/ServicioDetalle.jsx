@@ -112,7 +112,7 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">{servicio.nombre}</h1>
               <div className="w-20 h-1 bg-cta rounded mb-3"></div>
-              <p className="text-base sm:text-xl text-gray-300">{servicio.descripcion}</p>
+              <p className="text-base sm:text-xl text-gray-300 truncate">{servicio.descripcion}</p>
             </div>
           </div>
         </div>
