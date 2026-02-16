@@ -106,10 +106,10 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-cta rounded-lg flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 shadow-lg shadow-cta/30">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-cta rounded-lg flex items-center justify-center mb-4 sm:mb-0 sm:mr-6 shadow-lg shadow-cta/30 flex-shrink-0">
               <Icono className="text-3xl sm:text-4xl text-white" />
             </div>
-            <div>
+            <div className="min-w-0">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">{servicio.nombre}</h1>
               <div className="w-20 h-1 bg-cta rounded mb-3"></div>
               <p className="text-base sm:text-xl text-gray-300 truncate">{servicio.descripcion}</p>
