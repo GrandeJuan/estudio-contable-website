@@ -23,7 +23,7 @@ const Equipo = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {contenido.equipo.miembros.map((miembro, index) => (
             <ScrollReveal key={index} delay={index * 0.15}>
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group h-full flex flex-col">
                 {/* Foto */}
                 <div className="relative h-64 bg-gradient-to-br from-[#2C3E65] to-[#2D3E5F] overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -36,7 +36,7 @@ const Equipo = () => {
                 </div>
 
                 {/* Información */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-[#2C3E65] mb-2 text-center">
                     {miembro.nombre}
                   </h3>
