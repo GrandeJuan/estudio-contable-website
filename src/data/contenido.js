@@ -13,7 +13,6 @@ export const contenido = {
     horario: "Lunes a Viernes de 9:00 a 17:00 hs",
     googleMapsUrl: "https://maps.google.com/?q=Av.+Corrientes+1257+CABA",
     redesSociales: {
-      instagram: "https://instagram.com/estudiogrande",
       linkedin: "https://linkedin.com/company/estudio-grande",
       whatsapp: "https://wa.me/541143827139",
     }

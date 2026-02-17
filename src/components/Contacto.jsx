@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaLinkedin } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
 
@@ -127,16 +127,6 @@ const Contacto = ({ onConsultar }) => {
           <div className="mt-12 text-center">
             <h4 className="font-semibold text-lg mb-4">Seguinos en Redes</h4>
             <div className="flex space-x-4 justify-center">
-              {contenido.estudio.redesSociales.instagram && (
-                <a
-                  href={contenido.estudio.redesSociales.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 hover:bg-[#E4405F] rounded-lg flex items-center justify-center transition-colors duration-300"
-                >
-                  <FaInstagram className="text-2xl" />
-                </a>
-              )}
               {contenido.estudio.redesSociales.linkedin && (
                 <a
                   href={contenido.estudio.redesSociales.linkedin}

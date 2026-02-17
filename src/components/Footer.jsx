@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 
 const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar };
@@ -19,16 +19,6 @@ const Footer = () => {
               {contenido.estudio.descripcionCorta}
             </p>
             <div className="flex justify-center space-x-4">
-              {contenido.estudio.redesSociales.instagram && (
-                <a
-                  href={contenido.estudio.redesSociales.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#E4405F] text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
-                >
-                  <FaInstagram className="text-xl" />
-                </a>
-              )}
               {contenido.estudio.redesSociales.linkedin && (
                 <a
                   href={contenido.estudio.redesSociales.linkedin}
