@@ -143,7 +143,7 @@ export const contenido = {
             },
             {
               pregunta: "¿Qué incluye la gestión de rúbrica?",
-              respuesta: "Nos ocupamos de todo el trámite de rúbrica del libro de sueldos u hojas móviles ante el Ministerio de Trabajo, asegurando el cumplimiento de la normativa vigente en materia de registración laboral."
+              respuesta: "Nos ocupamos de todo el trámite de rúbrica del libro de sueldos u hojas móviles ante los organismos pertinentes, asegurando el cumplimiento de la normativa vigente en materia de registración laboral."
             }
           ]
         }
