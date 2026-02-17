@@ -1,7 +1,7 @@
-import { FaInstagram, FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 
-const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar };
+const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar };
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

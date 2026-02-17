@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { FaBars, FaTimes, FaChevronDown, FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 
-const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar };
+const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar };
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

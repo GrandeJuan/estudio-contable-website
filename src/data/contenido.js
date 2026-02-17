@@ -55,32 +55,31 @@ export const contenido = {
       {
         id: "contabilidad-general",
         nombre: "Contabilidad General",
-        descripcion: "Registración contable, confección de balances y estados contables para sociedades y personas físicas.",
+        descripcion: "Asesoramiento contable integral, registraciones contables, outsourcing y copiado de libros contables.",
         icono: "FaCalculator",
         detalles: {
-          descripcionLarga: "Brindamos servicios integrales de contabilidad general para todo tipo de organizaciones. Nos encargamos de la registración diaria de operaciones, conciliaciones bancarias, y la preparación de estados contables mensuales, trimestrales y anuales. Nuestro equipo garantiza el cumplimiento de las normas contables profesionales vigentes y proporciona información financiera confiable para la toma de decisiones.",
+          descripcionLarga: "Brindamos un servicio de asesoramiento contable integral pensado para acompañar a tu empresa en cada etapa de su gestión. Nos encargamos de las registraciones contables, la tercerización de procesos administrativos y contables (outsourcing), y el copiado de libros contables. Nuestro equipo garantiza información financiera confiable, ordenada y al día para la toma de decisiones.",
           incluye: [
-            "Registración contable de todas las operaciones comerciales",
+            "Asesoramiento contable integral y personalizado",
+            "Registraciones contables de todas las operaciones comerciales",
+            "Outsourcing de procesos contables y administrativos",
+            "Copiado de libros contables obligatorios",
             "Confección de balances mensuales, trimestrales y anuales",
-            "Estados contables bajo normas argentinas e internacionales (IFRS)",
             "Conciliaciones bancarias y de cuentas",
-            "Control de cuentas por cobrar y por pagar",
-            "Análisis de costos y márgenes de rentabilidad",
-            "Informes gerenciales personalizados",
-            "Asesoramiento en interpretación de estados contables"
+            "Informes gerenciales personalizados"
           ],
           faqs: [
             {
-              pregunta: "¿Con qué frecuencia se actualizan los registros contables?",
-              respuesta: "Actualizamos los registros contables de forma mensual como mínimo. Para clientes con mayor volumen de operaciones, podemos ofrecer actualizaciones semanales o incluso diarias según la necesidad."
+              pregunta: "¿Qué incluye el asesoramiento contable integral?",
+              respuesta: "Incluye el acompañamiento permanente en todas las cuestiones contables de tu empresa: desde la organización de la información financiera hasta la interpretación de estados contables para la toma de decisiones estratégicas."
+            },
+            {
+              pregunta: "¿Qué es el servicio de outsourcing contable?",
+              respuesta: "Es la tercerización parcial o total de los procesos contables y administrativos de tu empresa. Nos encargamos de las registraciones, la gestión documental y la generación de reportes, permitiéndote enfocarte en el negocio."
             },
             {
               pregunta: "¿Qué normas contables utilizan para preparar los estados contables?",
               respuesta: "Preparamos los estados contables siguiendo las Normas Contables Profesionales Argentinas (RT). Para empresas que lo requieran, también podemos aplicar Normas Internacionales de Información Financiera (NIIF/IFRS)."
-            },
-            {
-              pregunta: "¿Entregan informes gerenciales además de los estados contables?",
-              respuesta: "Sí, además de los estados contables obligatorios, preparamos informes gerenciales personalizados con análisis de rentabilidad, flujo de caja, evolución de ventas, costos y otros indicadores clave para la gestión del negocio."
             }
           ]
         }
@@ -88,33 +87,33 @@ export const contenido = {
       {
         id: "liquidacion-impuestos",
         nombre: "Liquidación de Impuestos",
-        descripcion: "Determinación y presentación de impuestos nacionales, provinciales y municipales (IVA, Ganancias, IIBB, Monotributo).",
+        descripcion: "Asesoramiento tributario integral, planificación fiscal y determinación de impuestos nacionales, provinciales y municipales.",
         icono: "FaFileInvoiceDollar",
         detalles: {
-          descripcionLarga: "Nos especializamos en la gestión integral de todas las obligaciones impositivas de nuestros clientes. Realizamos el cálculo preciso de impuestos, preparamos y presentamos declaraciones juradas en tiempo y forma, y brindamos asesoramiento continuo sobre el cumplimiento de las normativas tributarias vigentes. Nuestro objetivo es optimizar la carga fiscal dentro del marco legal.",
+          descripcionLarga: "Ofrecemos un servicio completo de asesoramiento tributario y liquidación de impuestos. Desde la planificación fiscal y la optimización de la carga tributaria hasta la determinación y presentación de impuestos en todos los niveles jurisdiccionales. Nos ocupamos de los regímenes de retención e información, la gestión del Monotributo, la atención de fiscalizaciones, el recupero de créditos fiscales vinculados a la exportación y el área contencioso tributario.",
           incluye: [
-            "Liquidación mensual de IVA (Impuesto al Valor Agregado)",
-            "Determinación anual de Impuesto a las Ganancias",
-            "Liquidación de Ingresos Brutos provinciales",
-            "Gestión de regímenes de retención y percepción",
-            "Presentación de declaraciones juradas mensuales y anuales",
-            "Adhesión y gestión del Monotributo",
-            "Liquidación de impuestos municipales (TISH, Patentes, ABL)",
+            "Asesoramiento tributario integral",
             "Planificación fiscal y optimización de la carga tributaria",
-            "Asesoramiento ante fiscalizaciones de AFIP, ARBA y Municipios"
+            "Determinación y presentación de impuestos nacionales, provinciales y municipales",
+            "Gestión de regímenes de retención e información",
+            "Informes para fines fiscales",
+            "Empadronamiento y recategorización de Monotributo",
+            "Atención de fiscalizaciones y requerimientos de los organismos de control",
+            "Recupero de créditos fiscales vinculados a la exportación",
+            "Área contencioso tributario"
           ],
           faqs: [
             {
               pregunta: "¿Qué impuestos están incluidos en el servicio?",
-              respuesta: "Gestionamos todos los impuestos aplicables a tu actividad: IVA, Ganancias, Ingresos Brutos (IIBB), Monotributo, impuestos municipales, regímenes de información, y cualquier otro tributo específico de tu sector."
+              respuesta: "Gestionamos todos los impuestos aplicables a tu actividad: IVA, Ganancias, Ingresos Brutos (IIBB), Monotributo, impuestos municipales, regímenes de información, y cualquier otro tributo específico de tu sector a nivel nacional, provincial y municipal."
             },
             {
-              pregunta: "¿Cómo aseguran el cumplimiento de los vencimientos?",
-              respuesta: "Mantenemos un calendario tributario actualizado y contactamos a nuestros clientes con anticipación a cada vencimiento. Además, gestionamos las presentaciones electrónicas y archivamos comprobantes de pago para futuras auditorías."
+              pregunta: "¿Qué es la planificación fiscal y cómo puede beneficiar a mi empresa?",
+              respuesta: "La planificación fiscal consiste en organizar tus operaciones económicas de manera que puedas optimizar legalmente la carga tributaria. Te permite ahorrar en impuestos, prever obligaciones futuras y tomar mejores decisiones comerciales."
             },
             {
-              pregunta: "¿Qué sucede si tengo una fiscalización de AFIP?",
-              respuesta: "Te acompañamos durante todo el proceso de fiscalización. Preparamos la documentación requerida, representamos tus intereses ante el organismo y elaboramos estrategias de defensa en caso de observaciones o ajustes propuestos."
+              pregunta: "¿Qué sucede si recibo una fiscalización o requerimiento de un organismo de control?",
+              respuesta: "Te acompañamos durante todo el proceso. Preparamos la documentación requerida, representamos tus intereses ante el organismo y elaboramos estrategias de defensa. También contamos con un área contencioso tributario para casos que requieran instancia administrativa o judicial."
             }
           ]
         }
@@ -122,104 +121,29 @@ export const contenido = {
       {
         id: "liquidacion-sueldos",
         nombre: "Liquidación de Sueldos",
-        descripcion: "Cálculo de haberes, cargas sociales, libro de sueldos digital y asesoramiento laboral completo.",
+        descripcion: "Liquidación mensual y quincenal de sueldos, emisión de recibos, cargas sociales y gestión de rúbrica.",
         icono: "FaUsers",
         detalles: {
-          descripcionLarga: "Gestionamos de manera integral la liquidación de sueldos de tu empresa, asegurando el cumplimiento de todas las normativas laborales vigentes. Desde el cálculo preciso de haberes hasta la gestión de aportes y contribuciones, nos encargamos de todos los aspectos de la administración de recursos humanos desde el punto de vista contable y legal.",
+          descripcionLarga: "Gestionamos de manera integral la liquidación de sueldos de tu empresa, aplicando los diversos convenios colectivos de trabajo vigentes. Nos encargamos de la emisión de recibos, la liquidación de cargas sociales, la gestión de rúbrica de libro de sueldos u hojas móviles, y la atención de fiscalizaciones y requerimientos de los organismos de control.",
           incluye: [
-            "Liquidación mensual de sueldos y jornales",
-            "Cálculo de horas extras, adicionales y bonificaciones",
-            "Determinación de cargas sociales (aportes y contribuciones)",
-            "Confección de recibos de sueldo digitales",
-            "Libro de sueldos digital (según normativa vigente)",
-            "Liquidaciones finales por despido, renuncia o jubilación",
-            "Cálculo de aguinaldos (SAC) y vacaciones",
-            "Declaraciones juradas AFIP (SICOSS, F.931)",
-            "Gestión de ART y obras sociales",
-            "Asesoramiento en convenios colectivos de trabajo"
+            "Liquidación de sueldos mensual y quincenal aplicando los diversos convenios colectivos de trabajo",
+            "Emisión de recibos de sueldos",
+            "Liquidación de cargas sociales (aportes y contribuciones)",
+            "Gestión de rúbrica de libro de sueldos u hojas móviles",
+            "Atención de fiscalizaciones y requerimientos de los organismos de control"
           ],
           faqs: [
             {
-              pregunta: "¿Incluye el servicio la emisión de recibos de sueldo digitales?",
-              respuesta: "Sí, emitimos recibos de sueldo digitales con firma electrónica de acuerdo a la normativa vigente. Los empleados pueden acceder a ellos de forma segura y descargarlos cuando lo necesiten."
+              pregunta: "¿Incluye el servicio la emisión de recibos de sueldo?",
+              respuesta: "Sí, nos encargamos de la emisión de recibos de sueldos de acuerdo a la normativa vigente, asegurando que cumplan con todos los requisitos legales."
             },
             {
-              pregunta: "¿Cómo se calculan las cargas sociales?",
-              respuesta: "Calculamos todos los aportes (a cargo del empleado) y contribuciones (a cargo del empleador) según las alícuotas vigentes para cada caso: jubilación, obra social, ART, sindicato, etc. Luego generamos las declaraciones juradas correspondientes para AFIP."
+              pregunta: "¿Trabajan con todos los convenios colectivos de trabajo?",
+              respuesta: "Sí, estamos capacitados para liquidar sueldos bajo los diversos convenios colectivos de trabajo. Conocemos las particularidades de cada sector y aplicamos correctamente los adicionales, escalas salariales y normativas específicas."
             },
             {
-              pregunta: "¿Qué pasa si tengo empleados bajo diferentes convenios colectivos?",
-              respuesta: "Estamos capacitados para liquidar sueldos bajo diferentes convenios colectivos de trabajo. Conocemos las particularidades de cada sector y aplicamos correctamente los adicionales, escalas salariales y normativas específicas."
-            }
-          ]
-        }
-      },
-      {
-        id: "asesoria-impositiva",
-        nombre: "Asesoría Impositiva",
-        descripcion: "Planificación fiscal, optimización de carga tributaria y consultoría permanente en materia impositiva.",
-        icono: "FaChartLine",
-        detalles: {
-          descripcionLarga: "Brindamos asesoramiento estratégico en materia impositiva para ayudarte a tomar decisiones informadas que optimicen tu carga tributaria dentro del marco legal. Analizamos tu situación particular, identificamos oportunidades de ahorro fiscal y diseñamos estrategias de planificación tributaria a corto y largo plazo.",
-          incluye: [
-            "Análisis de la situación fiscal actual de la empresa o persona",
-            "Planificación tributaria anual y plurianual",
-            "Optimización de la carga impositiva (tax planning)",
-            "Asesoramiento en elección del tipo societario más conveniente",
-            "Análisis de impacto fiscal de operaciones comerciales",
-            "Consultoría en reorganización empresarial",
-            "Asesoramiento en beneficios fiscales y regímenes de promoción",
-            "Respuesta a consultas impositivas diarias",
-            "Actualización permanente sobre cambios normativos",
-            "Prevención de contingencias fiscales"
-          ],
-          faqs: [
-            {
-              pregunta: "¿Qué es la planificación fiscal y por qué es importante?",
-              respuesta: "La planificación fiscal consiste en organizar tus operaciones económicas de manera que puedas minimizar legalmente la carga tributaria. Es importante porque te permite ahorrar dinero en impuestos, prever obligaciones futuras y evitar sorpresas desagradables."
-            },
-            {
-              pregunta: "¿Pueden ayudarme a elegir entre ser monotributista o responsable inscripto?",
-              respuesta: "Absolutamente. Analizamos tu facturación, tipo de actividad, costos y proyección de crecimiento para determinar qué régimen es más conveniente. También te asesoramos sobre el momento adecuado para cambiar de categoría."
-            },
-            {
-              pregunta: "¿Ofrecen asesoramiento sobre regímenes de promoción industrial?",
-              respuesta: "Sí, te orientamos sobre la existencia de regímenes de promoción económica aplicables a tu actividad (como promoción industrial, economías regionales, PyMEs, etc.) y te asistimos en la tramitación de los beneficios fiscales correspondientes."
-            }
-          ]
-        }
-      },
-      {
-        id: "constitucion-sociedades",
-        nombre: "Constitución de Sociedades",
-        descripcion: "Armado y gestión de trámites para SAS, SRL y SA ante IGJ y organismos pertinentes.",
-        icono: "FaBuilding",
-        detalles: {
-          descripcionLarga: "Te acompañamos en todo el proceso de constitución de sociedades comerciales. Desde el asesoramiento inicial sobre el tipo societario más conveniente hasta la inscripción definitiva ante los organismos de control. Nos encargamos de todos los trámites administrativos, legales y contables necesarios para que tu empresa inicie sus actividades de forma ordenada y cumpliendo con todas las normativas vigentes.",
-          incluye: [
-            "Asesoramiento sobre el tipo societario más conveniente (SAS, SRL, SA)",
-            "Redacción de estatutos sociales",
-            "Obtención de CUIT societaria",
-            "Inscripción ante IGJ (Inspección General de Justicia)",
-            "Inscripción en AFIP, Ingresos Brutos y Municipalidad",
-            "Apertura de libros societarios y contables",
-            "Confección de actas constitutivas",
-            "Trámites de habilitación comercial",
-            "Asesoramiento en modificaciones de estatuto",
-            "Gestión de aumento de capital social"
-          ],
-          faqs: [
-            {
-              pregunta: "¿Qué tipo de sociedad me conviene constituir?",
-              respuesta: "Depende de varios factores: cantidad de socios, capital disponible, responsabilidad patrimonial deseada y costos de mantenimiento. Las SAS son más ágiles y económicas, las SRL ofrecen mayor flexibilidad, y las SA son ideales para grandes empresas o si pensás incorporar inversores."
-            },
-            {
-              pregunta: "¿Cuánto tiempo lleva constituir una sociedad?",
-              respuesta: "Una SAS puede estar operativa en aproximadamente 7-10 días hábiles. Las SRL y SA pueden demorar entre 30 y 60 días, dependiendo de la carga de trabajo de la IGJ y la completitud de la documentación presentada."
-            },
-            {
-              pregunta: "¿Qué documentación necesito para iniciar el trámite?",
-              respuesta: "Necesitarás DNI de todos los socios, CUIT/CUIL, comprobantes de domicilio, y definir: objeto social, capital inicial, porcentajes de participación y autoridades de la sociedad. Nosotros te guiamos paso a paso en todo el proceso."
+              pregunta: "¿Qué incluye la gestión de rúbrica?",
+              respuesta: "Nos ocupamos de todo el trámite de rúbrica del libro de sueldos u hojas móviles ante el Ministerio de Trabajo, asegurando el cumplimiento de la normativa vigente en materia de registración laboral."
             }
           ]
         }
@@ -227,21 +151,14 @@ export const contenido = {
       {
         id: "auditoria",
         nombre: "Auditoría",
-        descripcion: "Auditoría de estados contables, certificaciones e informes especiales bajo normas profesionales.",
+        descripcion: "Auditoría y preparación de estados contables, informes y certificaciones especiales bajo normas profesionales.",
         icono: "FaSearchDollar",
         detalles: {
-          descripcionLarga: "Realizamos auditorías de estados contables bajo normas nacionales e internacionales. Nuestro equipo de auditores certificados examina la información financiera de tu empresa para emitir opiniones profesionales sobre su razonabilidad. También preparamos certificaciones especiales e informes requeridos por bancos, organismos de control o terceros interesados.",
+          descripcionLarga: "Realizamos auditorías y preparación de estados contables anuales e intermedios bajo normas contables profesionales vigentes. También emitimos informes y certificaciones especiales requeridos por bancos, organismos de control o terceros interesados. Nuestro equipo garantiza un examen independiente y riguroso de la información financiera de tu empresa.",
           incluye: [
-            "Auditoría de estados contables anuales",
-            "Revisión limitada de estados contables intermedios",
-            "Certificaciones para entidades bancarias",
-            "Informes especiales sobre rubros específicos",
-            "Auditoría de cumplimiento normativo",
-            "Due diligence contable para compraventa de empresas",
-            "Certificación de ventas para concesionarias",
-            "Informes de auditoría interna",
-            "Certificaciones de origen y destino de fondos",
-            "Auditorías solicitadas por organismos de control"
+            "Auditoría y preparación de estados contables anuales e intermedios",
+            "Informes especiales bajo normas contables profesionales",
+            "Certificaciones especiales bajo normas contables profesionales"
           ],
           faqs: [
             {
@@ -253,8 +170,36 @@ export const contenido = {
               respuesta: "Depende del tipo societario y tamaño. Las SA deben tener síndico o auditor obligatoriamente. Las SRL y SAS pueden requerirlo según su estatuto o por exigencia de terceros (bancos, inversores, etc.). Además, algunas actividades reguladas lo exigen."
             },
             {
-              pregunta: "¿Qué diferencia hay entre auditoría externa e interna?",
-              respuesta: "La auditoría externa es realizada por profesionales independientes para dar fe pública de los estados contables. La auditoría interna es un servicio para la gestión de la empresa, enfocado en evaluar controles internos, eficiencia operativa y cumplimiento de políticas."
+              pregunta: "¿Qué tipos de certificaciones especiales emiten?",
+              respuesta: "Emitimos certificaciones para entidades bancarias, organismos de control, origen y destino de fondos, certificaciones de ventas, y otros informes especiales requeridos por terceros, todos bajo las normas contables profesionales vigentes."
+            }
+          ]
+        }
+      },
+      {
+        id: "societario",
+        nombre: "Societario",
+        descripcion: "Constitución de sociedades ante IGJ, presentación de estados contables y modificaciones societarias.",
+        icono: "FaBuilding",
+        detalles: {
+          descripcionLarga: "Te acompañamos en todo lo relacionado con la gestión societaria de tu empresa. Desde la constitución de sociedades ante la IGJ (SA, SRL, SAU, entre otras) hasta la presentación de estados contables y la tramitación de modificaciones societarias. Nos encargamos de todos los trámites administrativos y legales para que tu sociedad funcione en regla.",
+          incluye: [
+            "Constitución de sociedades ante IGJ (SA, SRL, SAU, etc.)",
+            "Presentación de estados contables ante IGJ",
+            "Modificaciones de sociedades (cambio de objeto, aumento de capital, cambio de domicilio, etc.)"
+          ],
+          faqs: [
+            {
+              pregunta: "¿Qué tipo de sociedad me conviene constituir?",
+              respuesta: "Depende de varios factores: cantidad de socios, capital disponible, responsabilidad patrimonial deseada y costos de mantenimiento. Las SRL ofrecen flexibilidad, las SA son ideales para grandes empresas o si pensás incorporar inversores, y las SAU permiten un único socio con responsabilidad limitada."
+            },
+            {
+              pregunta: "¿Cuánto tiempo lleva constituir una sociedad ante IGJ?",
+              respuesta: "Los plazos varían según el tipo societario y la carga de trabajo de la IGJ. Generalmente puede demorar entre 30 y 60 días, dependiendo de la completitud de la documentación presentada."
+            },
+            {
+              pregunta: "¿Qué modificaciones societarias pueden tramitar?",
+              respuesta: "Tramitamos todo tipo de modificaciones: cambio de objeto social, aumento de capital, cambio de domicilio, cambio de autoridades, fusiones, escisiones, y cualquier otra modificación que requiera inscripción ante la IGJ."
             }
           ]
         }

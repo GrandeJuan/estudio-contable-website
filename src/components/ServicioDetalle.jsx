@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaChevronDown, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaClock } from 'react-icons/fa';
-import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar } from 'react-icons/fa';
+import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
 
@@ -67,7 +67,6 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
     FaCalculator,
     FaFileInvoiceDollar,
     FaUsers,
-    FaChartLine,
     FaBuilding,
     FaSearchDollar,
   };

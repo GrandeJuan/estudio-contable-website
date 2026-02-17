@@ -1,4 +1,4 @@
-import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaChartLine, FaBuilding, FaSearchDollar, FaArrowRight } from 'react-icons/fa';
+import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaArrowRight } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
 
@@ -7,7 +7,6 @@ const Servicios = () => {
     FaCalculator,
     FaFileInvoiceDollar,
     FaUsers,
-    FaChartLine,
     FaBuilding,
     FaSearchDollar,
   };
