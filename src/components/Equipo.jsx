@@ -26,13 +26,21 @@ const Equipo = () => {
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group h-full flex flex-col">
                 {/* Foto */}
                 <div className="relative h-64 bg-gradient-to-br from-[#2C3E65] to-[#2D3E5F] overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-full bg-white/10 backdrop-blur flex items-center justify-center">
-                      <span className="text-6xl text-white/50 font-bold">
-                        {miembro.nombre.charAt(miembro.nombre.indexOf(' ') + 1)}
-                      </span>
+                  {miembro.foto ? (
+                    <img
+                      src={miembro.foto}
+                      alt={miembro.nombre}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-32 h-32 rounded-full bg-white/10 backdrop-blur flex items-center justify-center">
+                        <span className="text-6xl text-white/50 font-bold">
+                          {miembro.nombre.charAt(miembro.nombre.indexOf(' ') + 1)}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* Información */}
