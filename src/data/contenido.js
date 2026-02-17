@@ -272,7 +272,7 @@ export const contenido = {
       {
         nombre: "Cr. Horacio Grande",
         cargo: "Director / Socio Fundador",
-        descripcion: "Contador Público (UBA). Más de 30 años de experiencia en asesoramiento contable e impositivo. Especialista en planificación fiscal y reorganización empresarial.",
+        descripcion: "Contador Público y Licenciado en Administración (UADE). Más de 30 años de experiencia en asesoramiento contable y tributario. Especialista en planificación fiscal y reorganización empresarial.",
         foto: "/images/equipo/persona-1.jpg",
         linkedin: "https://linkedin.com/in/horacio-grande"
       },
