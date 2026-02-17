@@ -32,11 +32,14 @@ const Servicios = () => {
         </ScrollReveal>
 
         {/* Grid de Servicios */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           {contenido.servicios.lista.map((servicio, index) => {
             const Icono = iconos[servicio.icono] || FaCalculator;
+            const totalServicios = contenido.servicios.lista.length;
+            const lastRowCount = totalServicios % 3;
+            const isFirstOfLastRow = lastRowCount === 2 && index === totalServicios - lastRowCount;
             return (
-              <ScrollReveal key={servicio.id} animation="scale-in" delay={index * 0.1} className="h-full w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]">
+              <ScrollReveal key={servicio.id} animation="scale-in" delay={index * 0.1} className={`h-full lg:col-span-2${isFirstOfLastRow ? ' lg:col-start-2' : ''}`}>
                 <div
                   onClick={() => handleServiceClick(servicio.id)}
                   className="group bg-white border-2 border-gray-100 rounded-lg p-6 sm:p-8 hover:border-cta hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
