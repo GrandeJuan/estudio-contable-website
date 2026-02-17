@@ -166,8 +166,8 @@ export const contenido = {
               respuesta: "Es un examen independiente y profesional de la información financiera de una empresa, realizado por un contador público. El auditor emite una opinión sobre si los estados contables reflejan razonablemente la situación patrimonial, económica y financiera del ente."
             },
             {
-              pregunta: "¿Mi empresa está obligada a realizar auditoría?",
-              respuesta: "Depende del tipo societario y tamaño. Las SA deben tener síndico o auditor obligatoriamente. Las SRL y SAS pueden requerirlo según su estatuto o por exigencia de terceros (bancos, inversores, etc.). Además, algunas actividades reguladas lo exigen."
+              pregunta: "¿Cuánto tiempo lleva preparar los estados contables?",
+              respuesta: "Los plazos dependen de la complejidad de la empresa y del estado de su documentación. En general, si la información está al día y ordenada, el proceso es bastante ágil. Lo ideal es coordinar con anticipación para cumplir con los vencimientos sin apuros."
             },
             {
               pregunta: "¿Qué tipos de certificaciones especiales emiten?",
