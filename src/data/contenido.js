@@ -79,7 +79,7 @@ export const contenido = {
             },
             {
               pregunta: "¿Qué normas contables utilizan para preparar los estados contables?",
-              respuesta: "Preparamos los estados contables siguiendo las Normas Contables Profesionales Argentinas (RT). No realizamos trabajos que requieran la aplicación de Normas Internacionales de Información Financiera (NIIF/IFRS)."
+              respuesta: "Preparamos los estados contables siguiendo las Normas Contables Profesionales Argentinas (RT)."
             }
           ]
         }
