@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/estudio-contable-website/',
+  base: '/',
 })
