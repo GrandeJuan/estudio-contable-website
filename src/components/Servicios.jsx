@@ -38,8 +38,9 @@ const Servicios = () => {
             const totalServicios = contenido.servicios.lista.length;
             const lastRowCount = totalServicios % 3;
             const isFirstOfLastRow = lastRowCount === 2 && index === totalServicios - lastRowCount;
+            const isLastItemAloneOnMd = totalServicios % 2 !== 0 && index === totalServicios - 1;
             return (
-              <ScrollReveal key={servicio.id} animation="scale-in" delay={index * 0.1} className={`h-full lg:col-span-2${isFirstOfLastRow ? ' lg:col-start-2' : ''}`}>
+              <ScrollReveal key={servicio.id} animation="scale-in" delay={index * 0.1} className={`h-full lg:col-span-2${isFirstOfLastRow ? ' lg:col-start-2' : ''}${isLastItemAloneOnMd ? ' md:col-span-2 md:max-w-[calc(50%_-_1rem)] md:justify-self-center lg:max-w-none lg:justify-self-auto' : ''}`}>
                 <div
                   onClick={() => handleServiceClick(servicio.id)}
                   className="group bg-white border-2 border-gray-100 rounded-lg p-6 sm:p-8 hover:border-cta hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
