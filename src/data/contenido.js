@@ -223,7 +223,7 @@ export const contenido = {
       {
         nombre: "Cr. Leonardo Wacs",
         cargo: "Director / Socio Fundador",
-        descripcion: "Contador Público (UBA). Especialista en auditoría y estados contables. Más de 25 años acompañando el crecimiento de PyMEs y grandes empresas.",
+        descripcion: "Contador Público (UBA). Especialista en auditoría y asesoramiento y planificación tributaria. Más de 25 años acompañando el crecimiento de PyMEs y grandes empresas.",
         foto: "/images/equipo/leonardo-wacs.png",
         linkedin: "https://linkedin.com/in/leonardo-wacs"
       },
