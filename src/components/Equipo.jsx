@@ -56,7 +56,7 @@ const Equipo = () => {
                   </p>
 
                   {miembro.linkedin && (
-                    <div className="text-center">
+                    <div className="text-center mt-auto">
                     <a
                       href={miembro.linkedin}
                       target="_blank"
