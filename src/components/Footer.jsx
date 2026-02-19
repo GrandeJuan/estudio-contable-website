@@ -99,6 +99,13 @@ const Footer = () => {
 
         {/* Línea divisoria */}
         <div className="border-t border-gray-800 pt-8">
+          <div className="flex justify-center mb-4">
+            <img
+              src="/images/logo.png"
+              alt={contenido.estudio.nombre}
+              className="h-16 w-auto opacity-70"
+            />
+          </div>
           <div className="text-center text-gray-500 text-sm">
             <p>
               © {currentYear} {contenido.estudio.nombre}. Todos los derechos reservados.
