@@ -217,14 +217,14 @@ export const contenido = {
         nombre: "Cr. Horacio Grande",
         cargo: "Director / Socio Fundador",
         descripcion: "Contador Público y Licenciado en Administración (UADE). Más de 30 años de experiencia en asesoramiento contable y tributario. Especialista en planificación fiscal y reorganización empresarial.",
-        foto: "/images/equipo/horacio-grande.jpg",
+        foto: "/images/equipo/horacio-grande.jpeg",
         linkedin: "https://www.linkedin.com/in/horacio-grandeyasoc/"
       },
       {
         nombre: "Cr. Leonardo Wacs",
         cargo: "Director / Socio Fundador",
         descripcion: "Contador Público (UBA). Especialista en auditoría, asesoramiento y planificación tributaria. Más de 25 años acompañando el crecimiento de PyMEs y grandes empresas.",
-        foto: "/images/equipo/leonardo-wacs.png",
+        foto: "/images/equipo/leonardo-wacs.jpeg",
         linkedin: "https://www.linkedin.com/in/leonardo-wacs-6314261a6/"
       },
     ]
