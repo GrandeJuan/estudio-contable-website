@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import ServicioDetalle from './components/ServicioDetalle';
 import ConsultaModal from './components/ConsultaModal';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [currentView, setCurrentView] = useState({ type: 'home' });
@@ -53,6 +54,7 @@ function App() {
         <Footer />
         <ConsultaModal isOpen={modalOpen} onClose={closeModal} />
         <Analytics />
+        <SpeedInsights />
       </div>
     );
   }
@@ -69,6 +71,7 @@ function App() {
       <Footer />
       <ConsultaModal isOpen={modalOpen} onClose={closeModal} />
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
