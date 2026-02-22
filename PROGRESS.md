@@ -22,19 +22,14 @@
 
 ---
 
-## 🔄 En progreso
-
-- [ ] Conectar dominio propio (NIC.ar → Vercel)
-  - Agregar registro CNAME `www` → `cname.vercel-dns.com`
-  - Agregar registro A `@` → `76.76.21.21`
-
----
-
 ## 📋 Pendiente
 
 - [ ] Agregar logo SVG del estudio en la sección Hero (pendiente diseño profesional)
 - [ ] Terminar configuración del servicio de Email (Email Services)
 - [ ] Configurar línea de WhatsApp Business
+- [ ] Conectar dominio propio (NIC.ar → Vercel)
+  - Agregar registro CNAME `www` → `cname.vercel-dns.com`
+  - Agregar registro A `@` → `76.76.21.21`
 
 ---
 
