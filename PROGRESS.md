@@ -21,6 +21,7 @@
 - [x] Repositorio en GitHub → https://github.com/GrandeJuan/estudio-contable-website
 - [x] Favicon con logo del estudio (`logo.png`)
 - [x] Vercel Analytics integrado (`@vercel/analytics`)
+- [x] Vercel Speed Insights integrado (`@vercel/speed-insights`)
 
 ---
 
