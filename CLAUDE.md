@@ -86,6 +86,15 @@ App.jsx → lee la URL hash y decide qué renderizar
 
 ---
 
+## Documentación del proyecto
+
+- **Después de cada cambio que lo amerite**, actualizar `PROGRESS.md` automáticamente.
+- Mover tareas completadas a la sección "Completado" y agregar nuevas tareas pendientes si surgen.
+- Cambios que ameritan actualizar la documentación: nuevas funcionalidades, integraciones, configuraciones, correcciones importantes, o cambios en el stack/dependencias.
+- No es necesario documentar cambios menores como ajustes de estilos o correcciones de typos.
+
+---
+
 ## Qué NO hacer en este proyecto
 
 - ❌ No agregar backend o API routes (esto es solo frontend estático)

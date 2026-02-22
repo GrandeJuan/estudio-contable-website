@@ -19,6 +19,8 @@
 - [x] Textos y servicios revisados y aprobados
 - [x] Deploy en Vercel → https://estudio-contable-website.vercel.app
 - [x] Repositorio en GitHub → https://github.com/GrandeJuan/estudio-contable-website
+- [x] Favicon con logo del estudio (`logo.png`)
+- [x] Vercel Analytics integrado (`@vercel/analytics`)
 
 ---
 
