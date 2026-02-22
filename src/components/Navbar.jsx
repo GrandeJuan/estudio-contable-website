@@ -70,9 +70,9 @@ const Navbar = () => {
               className="cursor-pointer flex items-center space-x-3"
             >
               <img
-                src="/images/logo.png"
+                src="/images/Logo.svg"
                 alt={contenido.estudio.nombre}
-                className="h-12 w-auto"
+                className="h-10 sm:h-12 w-auto"
               />
             </a>
           </div>
