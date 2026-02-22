@@ -32,7 +32,9 @@
 
 ## 📋 Pendiente
 
-- [ ] Agregar logo del estudio en la sección Hero
+- [ ] Agregar logo SVG del estudio en la sección Hero (pendiente diseño profesional)
+- [ ] Terminar configuración del servicio de Email (Email Services)
+- [ ] Configurar línea de WhatsApp Business
 
 ---
 
