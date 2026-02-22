@@ -8,6 +8,7 @@ import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import ServicioDetalle from './components/ServicioDetalle';
 import ConsultaModal from './components/ConsultaModal';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [currentView, setCurrentView] = useState({ type: 'home' });
@@ -51,6 +52,7 @@ function App() {
         </div>
         <Footer />
         <ConsultaModal isOpen={modalOpen} onClose={closeModal} />
+        <Analytics />
       </div>
     );
   }
@@ -66,6 +68,7 @@ function App() {
       <Contacto onConsultar={openModal} />
       <Footer />
       <ConsultaModal isOpen={modalOpen} onClose={closeModal} />
+      <Analytics />
     </div>
   );
 }

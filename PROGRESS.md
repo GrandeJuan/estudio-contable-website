@@ -19,20 +19,19 @@
 - [x] Textos y servicios revisados y aprobados
 - [x] Deploy en Vercel → https://estudio-contable-website.vercel.app
 - [x] Repositorio en GitHub → https://github.com/GrandeJuan/estudio-contable-website
-
----
-
-## 🔄 En progreso
-
-- [ ] Conectar dominio propio (NIC.ar → Vercel)
-  - Agregar registro CNAME `www` → `cname.vercel-dns.com`
-  - Agregar registro A `@` → `76.76.21.21`
+- [x] Favicon con logo del estudio (`logo.png`)
+- [x] Vercel Analytics integrado (`@vercel/analytics`)
 
 ---
 
 ## 📋 Pendiente
 
-- [ ] Agregar logo del estudio en la sección Hero
+- [ ] Agregar logo SVG del estudio en la sección Hero (pendiente diseño profesional)
+- [ ] Terminar configuración del servicio de Email (Email Services)
+- [ ] Configurar línea de WhatsApp Business
+- [ ] Conectar dominio propio (NIC.ar → Vercel)
+  - Agregar registro CNAME `www` → `cname.vercel-dns.com`
+  - Agregar registro A `@` → `76.76.21.21`
 
 ---
 
