@@ -11,12 +11,12 @@ const SobreNosotros = () => {
   };
 
   return (
-    <section id="sobre-nosotros" className="py-20 bg-white">
+    <section id="sobre-nosotros" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1B2A4A] mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1B2A4A] mb-4">
               {contenido.sobreNosotros.titulo}
             </h2>
             <div className="w-24 h-1 bg-[#D4A843] mx-auto"></div>

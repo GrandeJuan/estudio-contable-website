@@ -5,7 +5,7 @@ const Hero = ({ onConsultar }) => {
   return (
     <section
       id="inicio"
-      className="relative h-screen flex items-center justify-center"
+      className="relative min-h-screen flex items-center justify-center py-24"
       style={{
         background: 'linear-gradient(135deg, #F5F5F0 0%, #E8E6DF 50%, #D9D5CC 100%)',
       }}
@@ -30,10 +30,10 @@ const Hero = ({ onConsultar }) => {
             className="mx-auto w-64 sm:w-80 md:w-96 lg:w-[28rem]"
           />
         </div>
-        <p className="hero-stagger hero-stagger-2 text-xl sm:text-2xl md:text-3xl font-light mb-8 text-[#1B2A4A]">
+        <p className="hero-stagger hero-stagger-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 md:mb-8 text-[#1B2A4A]">
           {contenido.estudio.slogan}
         </p>
-        <p className="hero-stagger hero-stagger-3 text-base sm:text-lg md:text-xl mb-10 text-[#4A5568] max-w-2xl mx-auto">
+        <p className="hero-stagger hero-stagger-3 text-sm sm:text-base md:text-lg lg:text-xl mb-8 md:mb-10 text-[#4A5568] max-w-2xl mx-auto">
           Más de 30 años asesorando a empresas y particulares.
           <br />
           Servicios de auditoría, impuestos, sociedades y liquidación de sueldos.
@@ -43,7 +43,7 @@ const Hero = ({ onConsultar }) => {
         <div className="hero-stagger hero-stagger-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={onConsultar}
-            className="cursor-pointer bg-[#1B2A4A] hover:bg-[#2C3E65] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="cursor-pointer bg-[#1B2A4A] hover:bg-[#2C3E65] text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-sm md:text-base"
           >
             Contactanos
           </button>
@@ -52,7 +52,7 @@ const Hero = ({ onConsultar }) => {
             spy={true}
             smooth={true}
             duration={500}
-            className="cursor-pointer border-2 border-[#1B2A4A] text-[#1B2A4A] hover:bg-[#1B2A4A] hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+            className="cursor-pointer border-2 border-[#1B2A4A] text-[#1B2A4A] hover:bg-[#1B2A4A] hover:text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
           >
             Ver Servicios
           </Link>
