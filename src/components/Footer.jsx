@@ -73,7 +73,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href={`tel:${contenido.estudio.telefono.replace(/\s/g, '')}`}
+                  href={contenido.estudio.redesSociales.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-[#1B2A4A] transition-colors"
                 >
                   <FaPhone className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />

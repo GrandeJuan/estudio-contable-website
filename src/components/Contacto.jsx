@@ -46,7 +46,9 @@ const Contacto = ({ onConsultar }) => {
                   <div>
                     <h4 className="font-semibold text-[#1B2A4A] text-lg mb-1">Teléfono</h4>
                     <a
-                      href={`tel:${contenido.estudio.telefono.replace(/\s/g, '')}`}
+                      href={contenido.estudio.redesSociales.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-[#4A5568] hover:text-[#1B2A4A] transition-colors"
                     >
                       {contenido.estudio.telefono}

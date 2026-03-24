@@ -243,7 +243,7 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
                     </div>
                     <div className="flex items-center gap-3">
                       <FaPhoneAlt className="text-[#1B2A4A] flex-shrink-0" />
-                      <a href={`tel:${contenido.estudio.telefono.replace(/\s/g, '')}`} className="text-[#4A5568] hover:text-[#1B2A4A] transition-colors">
+                      <a href={contenido.estudio.redesSociales.whatsapp} target="_blank" rel="noopener noreferrer" className="text-[#4A5568] hover:text-[#1B2A4A] transition-colors">
                         {contenido.estudio.telefono}
                       </a>
                     </div>

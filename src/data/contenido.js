@@ -7,14 +7,14 @@ export const contenido = {
     nombre: "Estudio Contable Grande & Asociados",
     slogan: "Soluciones a tu medida",
     descripcionCorta: "Más de 30 años asesorando a empresas y particulares. Servicios de auditoría, impuestos, sociedades y liquidación de sueldos.",
-    telefono: "+54 11 4382-7139",
-    email: "recepcion@grandeyasoc.com.ar",
+    telefono: "+54 11 4384-8924",
+    email: "info@grandeyasoc.com.ar",
     direccion: "Av. Corrientes 1257, 3° F, Primer Cuerpo, CABA",
     horario: "Lunes a Viernes de 9:00 a 17:00 hs",
     googleMapsUrl: "https://maps.google.com/?q=Av.+Corrientes+1257+CABA",
     redesSociales: {
-      linkedin: "https://linkedin.com/company/estudio-grande",
-      whatsapp: "https://wa.me/541143827139",
+      linkedin: "https://www.linkedin.com/company/grandeyasoc",
+      whatsapp: "https://wa.me/541143848924",
     }
   },
 

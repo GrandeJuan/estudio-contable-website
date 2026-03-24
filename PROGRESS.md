@@ -30,15 +30,19 @@
   - Dorado `#D4A843` reservado solo para detalles decorativos (líneas bajo títulos)
   - Infografía de estadísticas con fondo crema y cards blancas
   - Contacto y Footer adaptados al esquema claro
+- [x] Modal de consulta actualizado al nuevo esquema de colores
+- [x] Datos de contacto actualizados:
+  - Email: `info@grandeyasoc.com.ar`
+  - Teléfono/WhatsApp: `+54 11 4384-8924`
+  - LinkedIn del estudio: `linkedin.com/company/grandeyasoc`
+- [x] Todos los links de teléfono redirigen a WhatsApp
+- [x] Dominio `grandeyasociados.com.ar` configurado en NIC.ar → Vercel (DNS delegados a `ns1/ns2.vercel-dns.com`, pendiente propagación)
 
 ---
 
 ## 📋 Pendiente
-- [ ] Terminar configuración del servicio de Email (Email Services)
-- [ ] Configurar línea de WhatsApp Business
-- [ ] Conectar dominio propio (NIC.ar → Vercel)
-  - Agregar registro CNAME `www` → `cname.vercel-dns.com`
-  - Agregar registro A `@` → `76.76.21.21`
+- [ ] Configurar EmailJS para que el modal de consultas envíe emails realmente (requiere cuenta en emailjs.com)
+- [ ] Esperar propagación DNS de `grandeyasociados.com.ar` y verificar que funcione
 
 ---
 
@@ -61,3 +65,5 @@
 | Hash routing en lugar de React Router | Funciona sin configuración especial en Vercel con Vite |
 | Contenido centralizado en `contenido.js` | Facilita ediciones sin tocar componentes |
 | Vercel como hosting | Deploy automático desde GitHub, gratuito, sin configuración |
+| DNS delegados a Vercel desde NIC.ar | Permite manejar dominio `.com.ar` directamente desde Vercel |
+| Teléfono redirige a WhatsApp | El estudio usa una línea fija con WhatsApp Business, toda comunicación va por ahí |

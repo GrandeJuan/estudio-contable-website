@@ -124,19 +124,19 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
       {/* Modal */}
       <div
-        className="relative bg-white rounded-t-xl sm:rounded-xl shadow-2xl w-full sm:max-w-lg max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
+        className="relative bg-[#F5F5F0] rounded-t-xl sm:rounded-xl shadow-2xl w-full sm:max-w-lg max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#2C3E65] to-[#1a2a4a] text-white p-6 sticky top-0 z-10">
+        <div className="bg-[#F5F5F0] border-b border-[#E8E6DF] p-6 sticky top-0 z-10">
           <button
             onClick={handleClose}
-            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+            className="absolute top-4 right-4 text-[#4A5568] hover:text-[#1B2A4A] transition-colors"
           >
             <FaTimes className="text-xl" />
           </button>
-          <h2 className="text-2xl font-bold">Hacenos tu consulta</h2>
-          <p className="text-gray-300 mt-1 text-sm">
+          <h2 className="text-2xl font-bold text-[#1B2A4A]">Hacenos tu consulta</h2>
+          <p className="text-[#4A5568] mt-1 text-sm">
             Completá el formulario y te respondemos a la brevedad.
           </p>
         </div>
@@ -147,15 +147,15 @@ const ConsultaModal = ({ isOpen, onClose }) => {
             /* Estado de éxito */
             <div className="text-center py-8">
               <FaCheckCircle className="text-5xl text-green-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-[#2C3E65] mb-2">
+              <h3 className="text-2xl font-bold text-[#1B2A4A] mb-2">
                 Consulta enviada
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-[#4A5568] mb-6">
                 Recibimos tu mensaje. Te vamos a responder lo antes posible.
               </p>
               <button
                 onClick={handleClose}
-                className="bg-cta hover:bg-cta-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                className="bg-[#1B2A4A] hover:bg-[#2C3E65] text-white font-semibold px-8 py-3 rounded-lg transition-colors"
               >
                 Cerrar
               </button>
@@ -165,7 +165,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Nombre */}
               <div>
-                <label className="block text-sm font-semibold text-[#2C3E65] mb-1">
+                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Nombre completo *
                 </label>
                 <input
@@ -174,13 +174,13 @@ const ConsultaModal = ({ isOpen, onClose }) => {
                   value={formData.nombre}
                   onChange={handleChange}
                   placeholder="Tu nombre"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-cta focus:outline-none transition-colors text-gray-800"
+                  className="w-full px-4 py-3 border border-[#E8E6DF] bg-white rounded-lg focus:border-[#1B2A4A] focus:outline-none transition-colors text-[#2B2B2B]"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-semibold text-[#2C3E65] mb-1">
+                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Email *
                 </label>
                 <input
@@ -189,14 +189,14 @@ const ConsultaModal = ({ isOpen, onClose }) => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="tu@email.com"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-cta focus:outline-none transition-colors text-gray-800"
+                  className="w-full px-4 py-3 border border-[#E8E6DF] bg-white rounded-lg focus:border-[#1B2A4A] focus:outline-none transition-colors text-[#2B2B2B]"
                 />
               </div>
 
               {/* Teléfono */}
               <div>
-                <label className="block text-sm font-semibold text-[#2C3E65] mb-1">
-                  Teléfono <span className="text-gray-400 font-normal">(opcional)</span>
+                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
+                  Teléfono <span className="text-[#4A5568] font-normal">(opcional)</span>
                 </label>
                 <input
                   type="tel"
@@ -204,20 +204,20 @@ const ConsultaModal = ({ isOpen, onClose }) => {
                   value={formData.telefono}
                   onChange={handleChange}
                   placeholder="+54 11 1234-5678"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-cta focus:outline-none transition-colors text-gray-800"
+                  className="w-full px-4 py-3 border border-[#E8E6DF] bg-white rounded-lg focus:border-[#1B2A4A] focus:outline-none transition-colors text-[#2B2B2B]"
                 />
               </div>
 
               {/* Motivo */}
               <div>
-                <label className="block text-sm font-semibold text-[#2C3E65] mb-1">
+                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Motivo de consulta *
                 </label>
                 <select
                   name="motivo"
                   value={formData.motivo}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-cta focus:outline-none transition-colors text-gray-800 bg-white"
+                  className="w-full px-4 py-3 border border-[#E8E6DF] bg-white rounded-lg focus:border-[#1B2A4A] focus:outline-none transition-colors text-[#2B2B2B]"
                 >
                   <option value="">Seleccioná un motivo</option>
                   {motivosConsulta.map((motivo) => (
@@ -230,7 +230,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
               {/* Mensaje */}
               <div>
-                <label className="block text-sm font-semibold text-[#2C3E65] mb-1">
+                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Tu consulta *
                 </label>
                 <textarea
@@ -240,9 +240,9 @@ const ConsultaModal = ({ isOpen, onClose }) => {
                   rows={4}
                   maxLength={MENSAJE_MAX}
                   placeholder="Contanos en qué podemos ayudarte..."
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-cta focus:outline-none transition-colors resize-none text-gray-800"
+                  className="w-full px-4 py-3 border border-[#E8E6DF] bg-white rounded-lg focus:border-[#1B2A4A] focus:outline-none transition-colors resize-none text-[#2B2B2B]"
                 />
-                <p className="text-xs text-gray-400 text-right mt-1">
+                <p className="text-xs text-[#4A5568] text-right mt-1">
                   {formData.mensaje.length}/{MENSAJE_MAX} caracteres
                 </p>
               </div>
@@ -256,7 +256,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
               <button
                 type="submit"
                 disabled={enviando}
-                className="flex items-center justify-center space-x-2 bg-cta hover:bg-cta-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center space-x-2 bg-[#1B2A4A] hover:bg-[#2C3E65] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 w-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <FaPaperPlane />
                 <span>{enviando ? 'Enviando...' : 'Enviar consulta'}</span>
@@ -264,9 +264,9 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
               {/* Separador */}
               <div className="flex items-center gap-4 py-2">
-                <div className="flex-1 h-px bg-gray-200" />
-                <span className="text-gray-400 text-sm">o si preferís</span>
-                <div className="flex-1 h-px bg-gray-200" />
+                <div className="flex-1 h-px bg-[#E8E6DF]" />
+                <span className="text-[#4A5568] text-sm">o si preferís</span>
+                <div className="flex-1 h-px bg-[#E8E6DF]" />
               </div>
 
               {/* Opciones alternativas */}
@@ -283,7 +283,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={handleMailto}
-                  className="flex items-center justify-center space-x-2 bg-[#2C3E65] hover:bg-[#1a2a4a] text-white font-semibold py-3 rounded-lg transition-colors text-sm"
+                  className="flex items-center justify-center space-x-2 border-2 border-[#1B2A4A] text-[#1B2A4A] hover:bg-[#1B2A4A] hover:text-white font-semibold py-3 rounded-lg transition-colors text-sm"
                 >
                   <FaEnvelope className="text-lg" />
                   <span>Email directo</span>
