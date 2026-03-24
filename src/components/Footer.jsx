@@ -7,15 +7,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-[#E8E6DF] text-[#4A5568] py-12 border-t border-[#D9D5CC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8 items-start">
           {/* Columna 1: Info del Estudio */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">
+            <h3 className="text-[#1B2A4A] text-lg font-semibold mb-4">
               {contenido.estudio.nombre}
             </h3>
-            <p className="text-gray-400 mb-4 text-justify">
+            <p className="text-[#4A5568] mb-4 text-justify">
               {contenido.estudio.descripcionCorta}
             </p>
             <div className="flex justify-center space-x-4">
@@ -24,7 +24,7 @@ const Footer = () => {
                   href={contenido.estudio.redesSociales.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#0077B5] text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 bg-[#1B2A4A]/10 hover:bg-[#0077B5] text-[#1B2A4A] hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <FaLinkedin className="text-xl" />
                 </a>
@@ -34,7 +34,7 @@ const Footer = () => {
                   href={contenido.estudio.redesSociales.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#25D366] text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 bg-[#1B2A4A]/10 hover:bg-[#25D366] text-[#1B2A4A] hover:text-white rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <FaWhatsapp className="text-xl" />
                 </a>
@@ -44,7 +44,7 @@ const Footer = () => {
 
           {/* Columna 2: Servicios Rápidos */}
           <div className="md:justify-self-center">
-            <h3 className="text-white text-lg font-semibold mb-4">Servicios</h3>
+            <h3 className="text-[#1B2A4A] text-lg font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2">
               {contenido.servicios.lista.slice(0, 6).map((servicio) => {
                 const Icono = iconos[servicio.icono] || FaCalculator;
@@ -52,9 +52,9 @@ const Footer = () => {
                   <li key={servicio.id}>
                     <a
                       href={`#/servicio/${servicio.id}`}
-                      className="flex items-center gap-2 text-gray-400 hover:text-cta transition-colors"
+                      className="flex items-center gap-2 text-[#4A5568] hover:text-[#1B2A4A] transition-colors"
                     >
-                      <Icono className="text-cta/50 flex-shrink-0 w-3.5 h-3.5" />
+                      <Icono className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />
                       {servicio.nombre}
                     </a>
                   </li>
@@ -65,32 +65,32 @@ const Footer = () => {
 
           {/* Columna 3: Contacto */}
           <div className="md:justify-self-end">
-            <h3 className="text-white text-lg font-semibold mb-4">Contacto</h3>
-            <ul className="space-y-3 text-gray-400">
+            <h3 className="text-[#1B2A4A] text-lg font-semibold mb-4">Contacto</h3>
+            <ul className="space-y-3 text-[#4A5568]">
               <li className="flex items-center gap-2">
-                <FaMapMarkerAlt className="text-cta/50 flex-shrink-0 w-3.5 h-3.5" />
+                <FaMapMarkerAlt className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />
                 {contenido.estudio.direccion}
               </li>
               <li>
                 <a
                   href={`tel:${contenido.estudio.telefono.replace(/\s/g, '')}`}
-                  className="flex items-center gap-2 hover:text-cta transition-colors"
+                  className="flex items-center gap-2 hover:text-[#1B2A4A] transition-colors"
                 >
-                  <FaPhone className="text-cta/50 flex-shrink-0 w-3.5 h-3.5" />
+                  <FaPhone className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />
                   {contenido.estudio.telefono}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${contenido.estudio.email}`}
-                  className="flex items-center gap-2 hover:text-cta transition-colors"
+                  className="flex items-center gap-2 hover:text-[#1B2A4A] transition-colors"
                 >
-                  <FaEnvelope className="text-cta/50 flex-shrink-0 w-3.5 h-3.5" />
+                  <FaEnvelope className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />
                   {contenido.estudio.email}
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <FaClock className="text-cta/50 flex-shrink-0 w-3.5 h-3.5" />
+                <FaClock className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />
                 {contenido.estudio.horario}
               </li>
             </ul>
@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
 
         {/* Línea divisoria */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-[#D4A843] pt-8">
           <div className="flex justify-center mb-4">
             <img
               src="/images/logo.png"
@@ -106,12 +106,12 @@ const Footer = () => {
               className="h-16 w-auto opacity-70"
             />
           </div>
-          <div className="text-center text-gray-500 text-sm">
+          <div className="text-center text-[#6B7280] text-sm">
             <p>
               © {currentYear} {contenido.estudio.nombre}. Todos los derechos reservados.
             </p>
             <p className="mt-2">
-              Desarrollado con ❤️ por <a href="https://www.linkedin.com/in/juan-francisco-grande/" target="_blank" rel="noopener noreferrer" className="hover:text-cta transition-colors underline">Juan Grande</a>
+              Desarrollado con ❤️ por <a href="https://www.linkedin.com/in/juan-francisco-grande/" target="_blank" rel="noopener noreferrer" className="hover:text-[#1B2A4A] transition-colors underline">Juan Grande</a>
             </p>
           </div>
         </div>

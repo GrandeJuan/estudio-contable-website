@@ -11,15 +11,15 @@ const SobreNosotros = () => {
   };
 
   return (
-    <section id="sobre-nosotros" className="py-20 bg-gray-50">
+    <section id="sobre-nosotros" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2C3E65] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1B2A4A] mb-4">
               {contenido.sobreNosotros.titulo}
             </h2>
-            <div className="w-24 h-1 bg-cta mx-auto"></div>
+            <div className="w-24 h-1 bg-[#D4A843] mx-auto"></div>
           </div>
         </ScrollReveal>
 
@@ -29,7 +29,7 @@ const SobreNosotros = () => {
           <ScrollReveal animation="fade-right">
             <div className="space-y-6">
               {contenido.sobreNosotros.parrafos.map((parrafo, index) => (
-                <p key={index} className="text-gray-700 leading-relaxed text-lg text-justify">
+                <p key={index} className="text-[#4A5568] leading-relaxed text-lg text-justify">
                   {parrafo}
                 </p>
               ))}
@@ -39,31 +39,31 @@ const SobreNosotros = () => {
           {/* Infografía */}
           <ScrollReveal animation="fade-left" delay={0.2}>
             <div className="relative">
-              <div className="bg-[#2C3E65] rounded-lg p-8 shadow-xl">
-                <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center text-white">
-                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
-                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={30} suffix="+" /></div>
-                    <div className="text-xs sm:text-sm">Años de Experiencia</div>
+              <div className="bg-[#F5F5F0] rounded-lg p-8 shadow-md border border-[#E8E6DF]">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center">
+                  <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-[#E8E6DF]">
+                    <div className="text-2xl sm:text-4xl font-bold text-[#1B2A4A] mb-2"><CountUp end={30} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm text-[#4A5568]">Años de Experiencia</div>
                   </div>
-                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
-                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={350} suffix="+" /></div>
-                    <div className="text-xs sm:text-sm">Clientes Satisfechos</div>
+                  <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-[#E8E6DF]">
+                    <div className="text-2xl sm:text-4xl font-bold text-[#1B2A4A] mb-2"><CountUp end={350} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm text-[#4A5568]">Clientes Satisfechos</div>
                   </div>
-                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
-                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={200} suffix="+" /></div>
-                    <div className="text-xs sm:text-sm">Empresas Asesoradas</div>
+                  <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-[#E8E6DF]">
+                    <div className="text-2xl sm:text-4xl font-bold text-[#1B2A4A] mb-2"><CountUp end={200} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm text-[#4A5568]">Empresas Asesoradas</div>
                   </div>
-                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
-                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={2500} suffix="+" /></div>
-                    <div className="text-xs sm:text-sm">Trámites Anuales</div>
+                  <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-[#E8E6DF]">
+                    <div className="text-2xl sm:text-4xl font-bold text-[#1B2A4A] mb-2"><CountUp end={2500} suffix="+" /></div>
+                    <div className="text-xs sm:text-sm text-[#4A5568]">Trámites Anuales</div>
                   </div>
-                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
-                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2"><CountUp end={100} suffix="%" /></div>
-                    <div className="text-xs sm:text-sm">Compromiso</div>
+                  <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-[#E8E6DF]">
+                    <div className="text-2xl sm:text-4xl font-bold text-[#1B2A4A] mb-2"><CountUp end={100} suffix="%" /></div>
+                    <div className="text-xs sm:text-sm text-[#4A5568]">Compromiso</div>
                   </div>
-                  <div className="bg-white/10 p-4 sm:p-6 rounded-lg backdrop-blur">
-                    <div className="text-2xl sm:text-4xl font-bold text-cta mb-2">24/7</div>
-                    <div className="text-xs sm:text-sm">Disponibilidad</div>
+                  <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-[#E8E6DF]">
+                    <div className="text-2xl sm:text-4xl font-bold text-[#1B2A4A] mb-2">24/7</div>
+                    <div className="text-xs sm:text-sm text-[#4A5568]">Disponibilidad</div>
                   </div>
                 </div>
               </div>
@@ -77,14 +77,14 @@ const SobreNosotros = () => {
             const IconoValor = iconos[valor.titulo] || FaHandshake;
             return (
               <ScrollReveal key={index} delay={index * 0.15} className="h-full">
-                <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col items-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-cta/10 rounded-full mb-6 mx-auto">
-                    <IconoValor className="text-3xl text-cta" />
+                <div className="bg-[#F5F5F0] p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col items-center border border-[#E8E6DF]">
+                  <div className="flex items-center justify-center w-16 h-16 bg-[#1B2A4A]/10 rounded-full mb-6 mx-auto">
+                    <IconoValor className="text-3xl text-[#1B2A4A]" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#2C3E65] mb-4 text-center">
+                  <h3 className="text-2xl font-bold text-[#1B2A4A] mb-4 text-center">
                     {valor.titulo}
                   </h3>
-                  <p className="text-gray-600 text-center leading-relaxed">
+                  <p className="text-[#4A5568] text-center leading-relaxed">
                     {valor.descripcion}
                   </p>
                 </div>

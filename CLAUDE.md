@@ -77,12 +77,16 @@ App.jsx → lee la URL hash y decide qué renderizar
 
 ## Paleta de colores
 
-| Variable | Hex |
-|----------|-----|
-| Azul Marino (principal) | `#1B2A4A` |
-| Dorado (acento) | `#D4A843` |
-| Gris claro (fondos) | `#F9FAFB` |
-| Blanco | `#FFFFFF` |
+| Variable | Hex | Uso |
+|----------|-----|-----|
+| Azul Marino (principal) | `#1B2A4A` | Títulos, iconos, botones, textos destacados |
+| Azul Marino claro | `#2C3E65` | Hover de botones, degradados |
+| Dorado (solo detalles) | `#D4A843` | Líneas decorativas bajo títulos, separadores |
+| Crema claro (fondos) | `#F5F5F0` | Fondo de secciones alternas, navbar |
+| Beige (fondos) | `#E8E6DF` | Fondo footer, bordes |
+| Beige oscuro | `#D9D5CC` | Degradados, bordes footer |
+| Gris texto | `#4A5568` | Texto secundario, párrafos |
+| Blanco | `#FFFFFF` | Fondo de secciones alternas, cards |
 
 ---
 

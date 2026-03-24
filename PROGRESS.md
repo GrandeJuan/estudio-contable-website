@@ -22,12 +22,18 @@
 - [x] Favicon con logo del estudio (`logo.png`)
 - [x] Vercel Analytics integrado (`@vercel/analytics`)
 - [x] Vercel Speed Insights integrado (`@vercel/speed-insights`)
+- [x] Logo del estudio (`logo-hero.png`) integrado en la sección Hero
+- [x] Rediseño visual completo: esquema de colores claro/crema en toda la página
+  - Hero con fondo degradado crema en lugar de azul oscuro
+  - Todas las secciones armonizadas con paleta clara (crema, blanco, beige)
+  - Iconos y números en azul marino `#1B2A4A` (mejor contraste con fondo claro)
+  - Dorado `#D4A843` reservado solo para detalles decorativos (líneas bajo títulos)
+  - Infografía de estadísticas con fondo crema y cards blancas
+  - Contacto y Footer adaptados al esquema claro
 
 ---
 
 ## 📋 Pendiente
-
-- [ ] Agregar logo SVG del estudio en la sección Hero (pendiente diseño profesional)
 - [ ] Terminar configuración del servicio de Email (Email Services)
 - [ ] Configurar línea de WhatsApp Business
 - [ ] Conectar dominio propio (NIC.ar → Vercel)
