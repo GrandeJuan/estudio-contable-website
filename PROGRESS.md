@@ -36,13 +36,18 @@
   - Teléfono/WhatsApp: `+54 11 4384-8924`
   - LinkedIn del estudio: `linkedin.com/company/grandeyasoc`
 - [x] Todos los links de teléfono redirigen a WhatsApp
-- [x] Dominio `grandeyasociados.com.ar` configurado en NIC.ar → Vercel (DNS delegados a `ns1/ns2.vercel-dns.com`, pendiente propagación)
+- [x] Dominio `grandeyasociados.com.ar` configurado en NIC.ar → Vercel (DNS delegados a `ns1/ns2.vercel-dns.com`)
+- [x] EmailJS integrado — modal de consultas envía emails realmente vía Gmail (`consultas.grandeyasoc@gmail.com`) a `info@grandeyasoc.com.ar`
 
 ---
 
 ## 📋 Pendiente
-- [ ] Configurar EmailJS para que el modal de consultas envíe emails realmente (requiere cuenta en emailjs.com, conectar email `info@grandeyasoc.com.ar`, crear template y pegar los 3 IDs en `ConsultaModal.jsx`)
 - [ ] Diseñar logo y banner para el perfil de LinkedIn del estudio (`linkedin.com/company/grandeyasoc`)
+
+### Completado recientemente:
+- [x] ~~Configurar EmailJS~~ → funcionando con Gmail (`consultas.grandeyasoc@gmail.com`) + reenvío a `info@grandeyasoc.com.ar`
+  - Service ID: `service_41lb5cw` | Template ID: `template_o0nkrtt`
+  - 200 emails/mes en plan gratuito (se resetea mensualmente)
 - [x] ~~Esperar propagación DNS de `grandeyasociados.com.ar`~~ → dominio activo y funcionando
 - [x] ~~Registrar en Google Search Console y enviar sitemap~~ → verificado, sitemap enviado (6 páginas descubiertas)
 
@@ -99,3 +104,4 @@ El SEO es una parte clave del proyecto. Sin él, Google no indexa la página y n
 | Vercel como hosting | Deploy automático desde GitHub, gratuito, sin configuración |
 | DNS delegados a Vercel desde NIC.ar | Permite manejar dominio `.com.ar` directamente desde Vercel |
 | Teléfono redirige a WhatsApp | El estudio usa una línea fija con WhatsApp Business, toda comunicación va por ahí |
+| EmailJS con Gmail intermedio | El SMTP de DattaWeb no conectaba desde EmailJS; se usa un Gmail dedicado como remitente |

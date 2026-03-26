@@ -6,9 +6,9 @@ import { contenido } from '../data/contenido';
 // CONFIGURACIÓN DE EMAILJS
 // Completá estos datos con tu cuenta de emailjs.com
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-const EMAILJS_SERVICE_ID = 'TU_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'TU_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'TU_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'service_41lb5cw';
+const EMAILJS_TEMPLATE_ID = 'template_o0nkrtt';
+const EMAILJS_PUBLIC_KEY = 'Y9ZPdlVA7hhhUpPkv';
 
 const motivosConsulta = [
   'Contabilidad general',
