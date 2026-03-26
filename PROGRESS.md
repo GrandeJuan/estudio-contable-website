@@ -12,7 +12,7 @@
 - [x] FAQs expandibles por servicio
 - [x] Integración WhatsApp y Email
 - [x] Google Maps con dirección real del estudio
-- [x] SEO básico (meta tags, Open Graph)
+- [x] SEO completo (ver sección SEO abajo)
 - [x] Diseño responsive completo
 - [x] Fotos reales del equipo
 - [x] Datos de contacto reales (teléfono, email, dirección, WhatsApp)
@@ -41,8 +41,10 @@
 ---
 
 ## 📋 Pendiente
-- [ ] Configurar EmailJS para que el modal de consultas envíe emails realmente (requiere cuenta en emailjs.com)
+- [ ] Configurar EmailJS para que el modal de consultas envíe emails realmente (requiere cuenta en emailjs.com, conectar email `info@grandeyasoc.com.ar`, crear template y pegar los 3 IDs en `ConsultaModal.jsx`)
+- [ ] Diseñar logo y banner para el perfil de LinkedIn del estudio (`linkedin.com/company/grandeyasoc`)
 - [ ] Esperar propagación DNS de `grandeyasociados.com.ar` y verificar que funcione
+- [ ] Registrar el sitio en Google Search Console y enviar el sitemap
 
 ---
 
@@ -54,6 +56,36 @@
   - Subida de documentos
   - Panel del contador y panel del cliente
   - URL: `app.dominio.com.ar`
+
+---
+
+## 🔍 SEO — Implementación completa
+
+El SEO es una parte clave del proyecto. Sin él, Google no indexa la página y nadie la encuentra.
+
+### Implementado en el código:
+- **Meta tags** — title, description, keywords en `index.html`
+- **Open Graph** — og:title, og:description, og:image, og:url, og:locale, og:site_name
+- **Twitter Cards** — summary_large_image con imagen y descripción
+- **JSON-LD** (schema.org) — tipo `AccountingService` con datos del negocio, dirección, teléfono, email, horarios, servicios ofrecidos y LinkedIn
+- **Canonical URL** — apunta a `https://grandeyasociados.com.ar/`
+- **Robots meta** — `index, follow`
+- **sitemap.xml** — homepage + 5 páginas de servicios
+- **robots.txt** — permite indexación, apunta al sitemap
+- **H1 correcto** — el slogan del Hero es el `<h1>` de la página
+- **Jerarquía de headings** — H1 → H2 (secciones) → H3 (subsecciones)
+- **HTML semántico** — `<nav>`, `<main>`, `<section>`, `<footer>`
+- **Alt tags** — todas las imágenes tienen texto alternativo descriptivo
+- **Favicon** — logo del estudio como ícono del sitio
+
+### Pendiente fuera del código:
+- [ ] Registrar en Google Search Console y enviar sitemap
+- [ ] Verificar indexación una vez que el dominio propague
+
+### Archivos relacionados:
+- `index.html` — meta tags, Open Graph, Twitter Cards, JSON-LD
+- `public/sitemap.xml` — mapa del sitio
+- `public/robots.txt` — directivas para crawlers
 
 ---
 

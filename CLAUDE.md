@@ -99,6 +99,20 @@ App.jsx → lee la URL hash y decide qué renderizar
 
 ---
 
+## SEO
+
+El SEO es parte fundamental del proyecto. Cualquier cambio debe mantener o mejorar el SEO existente.
+
+- **`index.html`** contiene: meta tags, Open Graph, Twitter Cards, JSON-LD (schema.org `AccountingService`), canonical URL
+- **`public/sitemap.xml`** — actualizar si se agregan o quitan páginas/servicios
+- **`public/robots.txt`** — directivas para crawlers
+- **H1** está en el Hero (slogan). No duplicar H1 en otras secciones
+- **Jerarquía**: H1 (Hero) → H2 (títulos de sección) → H3 (subtítulos)
+- **Alt tags**: todas las imágenes deben tener texto alternativo descriptivo
+- **Dominio canónico**: `https://grandeyasociados.com.ar/`
+
+---
+
 ## Qué NO hacer en este proyecto
 
 - ❌ No agregar backend o API routes (esto es solo frontend estático)
