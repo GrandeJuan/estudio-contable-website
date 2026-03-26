@@ -63,11 +63,13 @@ function App() {
   return (
     <div className="font-sans">
       <Navbar />
-      <Hero onConsultar={openModal} />
-      <SobreNosotros />
-      <Servicios />
-      <Equipo />
-      <Contacto onConsultar={openModal} />
+      <main>
+        <Hero onConsultar={openModal} />
+        <SobreNosotros />
+        <Servicios />
+        <Equipo />
+        <Contacto onConsultar={openModal} />
+      </main>
       <Footer />
       <ConsultaModal isOpen={modalOpen} onClose={closeModal} />
       <Analytics />

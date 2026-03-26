@@ -30,9 +30,9 @@ const Hero = ({ onConsultar }) => {
             className="mx-auto w-64 sm:w-80 md:w-96 lg:w-[28rem]"
           />
         </div>
-        <p className="hero-stagger hero-stagger-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 md:mb-8 text-[#1B2A4A]">
+        <h1 className="hero-stagger hero-stagger-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 md:mb-8 text-[#1B2A4A]">
           {contenido.estudio.slogan}
-        </p>
+        </h1>
         <p className="hero-stagger hero-stagger-3 text-sm sm:text-base md:text-lg lg:text-xl mb-8 md:mb-10 text-[#4A5568] max-w-2xl mx-auto">
           Más de 30 años asesorando a empresas y particulares.
           <br />
