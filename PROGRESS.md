@@ -43,8 +43,8 @@
 ## 📋 Pendiente
 - [ ] Configurar EmailJS para que el modal de consultas envíe emails realmente (requiere cuenta en emailjs.com, conectar email `info@grandeyasoc.com.ar`, crear template y pegar los 3 IDs en `ConsultaModal.jsx`)
 - [ ] Diseñar logo y banner para el perfil de LinkedIn del estudio (`linkedin.com/company/grandeyasoc`)
-- [ ] Esperar propagación DNS de `grandeyasociados.com.ar` y verificar que funcione
-- [ ] Registrar el sitio en Google Search Console y enviar el sitemap
+- [x] ~~Esperar propagación DNS de `grandeyasociados.com.ar`~~ → dominio activo y funcionando
+- [x] ~~Registrar en Google Search Console y enviar sitemap~~ → verificado, sitemap enviado (6 páginas descubiertas)
 
 ---
 
@@ -78,9 +78,9 @@ El SEO es una parte clave del proyecto. Sin él, Google no indexa la página y n
 - **Alt tags** — todas las imágenes tienen texto alternativo descriptivo
 - **Favicon** — logo del estudio como ícono del sitio
 
-### Pendiente fuera del código:
-- [ ] Registrar en Google Search Console y enviar sitemap
-- [ ] Verificar indexación una vez que el dominio propague
+### Completado fuera del código:
+- [x] Registrado en Google Search Console, sitemap enviado y aceptado (6 páginas)
+- [x] Dominio `grandeyasociados.com.ar` activo y propagado
 
 ### Archivos relacionados:
 - `index.html` — meta tags, Open Graph, Twitter Cards, JSON-LD
