@@ -1,4 +1,4 @@
-import { FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaBookOpen } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { contenido } from '../data/contenido';
 
@@ -61,6 +61,15 @@ const Footer = () => {
                   </li>
                 );
               })}
+              <li className="pt-1">
+                <Link
+                  to="/guias"
+                  className="flex items-center gap-2 font-medium text-[#1B2A4A] hover:text-[#D4A843] transition-colors"
+                >
+                  <FaBookOpen className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />
+                  Guías contables
+                </Link>
+              </li>
             </ul>
           </div>
 
