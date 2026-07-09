@@ -43,7 +43,20 @@
 
 ## 📋 Pendiente
 - [ ] Diseñar logo y banner para el perfil de LinkedIn del estudio (`linkedin.com/company/grandeyasoc`)
-- [ ] **Google Search Console:** reenviar/validar el nuevo `sitemap.xml` (URLs reales sin `#`) y pedir indexación de las 5 URLs `/servicio/{id}`.
+- [ ] **Google Search Console:** reenviar/validar el nuevo `sitemap.xml` (ahora 11 URLs: home + 5 servicios + `/guias` + 4 guías) y pedir indexación de las nuevas URLs `/guias/{slug}`.
+- [ ] **⚠️ Validación de contadores de las 4 guías (BORRADORES):** un socio matriculado debe revisar y confirmar las cifras y fechas fiscales antes de publicar. Ver los marcadores `[⚠️ VERIFICAR CON CONTADOR: ...]` en `src/data/guias.js` (honorarios por sueldos/balances/sociedades, escala de monotributo vigente en la recategorización de julio, capital mínimo SAS, costos de constitución societaria, fechas exactas del calendario ARCA).
+- [ ] Aportar el **N° de matrícula CPCECABA** de cada socio para firmar las guías (suma E-E-A-T). Hoy el campo `matricula` en `guias.js` está en `null` (no se inventa).
+
+### Completado recientemente (Sección de contenido `/guias` — SEO/GEO):
+- [x] **Nueva sección prerenderizada `/guias`** (índice) + `/guias/{slug}` por artículo, con `getStaticPaths` (mismo mecanismo SSG que los servicios). El build genera ahora **11 páginas** (home + 5 servicios + índice + 4 guías).
+- [x] **Contenido centralizado en `src/data/guias.js`** (misma regla que `contenido.js`): cada guía con slug, título, H1, seoTitle/seoDescription, resumen, fecha de publicación y de última actualización, autor, cuerpo por bloques tipados, FAQs, `howTo` opcional, `fuentes` citadas y el `id` del servicio con el que enlaza internamente.
+- [x] **Los 4 artículos** (BORRADORES pendientes de validación de contadores): (1) Recategorización de Monotributo julio 2026 paso a paso; (2) ¿Cuánto cobra un contador en 2026? honorarios en CABA; (3) SAS, SRL o SA: cuál conviene en 2026; (4) Calendario de vencimientos ARCA 2026.
+- [x] **SEO por artículo:** title/description/canonical únicos, `og:type=article`, JSON-LD `Article` + `BreadcrumbList` + `FAQPage` (y `HowTo` en la recategorización). Helpers `guiaSeo()`/`guiaJsonLd()` en `src/seo.js`; `Seo.jsx` acepta `ogType`.
+- [x] **Enlace interno** desde cada guía al servicio que convierte (recategorización y vencimientos → liquidación de impuestos; honorarios → contabilidad; societario → societario).
+- [x] **Guardarraíles de precisión:** cifras investigadas con fuente citada inline (escala de monotributo tomada del sitio oficial ARCA, vigente 1/02/2026; capital mínimo SA $30M por Decreto 209/2024; fechas de recategorización 15/7–5/8). Datos no verificables → marcador visible `[⚠️ VERIFICAR CON CONTADOR: ...]` resaltado en el HTML. Cada artículo lleva "Última actualización" visible y un disclaimer de que es orientativo.
+- [x] **Discoverability:** "Guías" agregado al Navbar (desktop + mobile) y al Footer; `/guias` y las 4 URLs sumadas a `public/sitemap.xml` y a `public/llms.txt`.
+- [x] **Armonía visual:** cards del índice de alto uniforme (`min-h` + `line-clamp-2/3` + CTA con `mt-auto`), grilla `md:grid-cols-2` (2×2 sin fila incompleta); artículo en columna legible `max-w-3xl`, `text-left md:text-justify`, tablas con scroll horizontal propio, un solo H1 por página. Reusa tokens y paleta del sitio.
+- Gate: `npm run build` OK (11 páginas SSG). Smoke sobre `dist/`: cada `/guias/{slug}` prerenderiza su title, contenido y JSON-LD `Article`; el índice lista las 4; el sitemap las incluye; las 6 rutas previas y sus `FAQPage`/meta/WebP intactas.
 
 ### Completado recientemente (SEO quick-wins — GEO/AI + schema + entidad):
 - [x] **`FAQPage` schema por servicio:** `faqPageJsonLd()` en `src/seo.js`, sumado al array de `servicioJsonLd()` con `.filter(Boolean)`. Los 5 servicios emiten ahora `FAQPage` en el HTML prerenderizado (habilita rich result de FAQ y hace las respuestas extraíbles por answer-engines).

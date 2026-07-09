@@ -3,6 +3,7 @@
 // Fuente única para títulos, descripciones, canonical, OG y JSON-LD.
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 import { contenido } from './data/contenido';
+import { guias } from './data/guias';
 
 export const SITE_URL = 'https://grandeyasociados.com.ar';
 export const OG_IMAGE = `${SITE_URL}/images/logo-hero.png`;
@@ -41,6 +42,96 @@ export function servicioSeo(servicio) {
     ogTitle: `${servicio.nombre} — ${NOMBRE}`,
     ogDescription: servicio.descripcion,
   };
+}
+
+// Metadata del índice de guías ------------------------------------------------
+export const guiasSeo = {
+  title: 'Guías contables e impositivas en CABA | Grande & Asociados',
+  description:
+    'Guías prácticas y actualizadas sobre monotributo, impuestos (ARCA), honorarios de contador y sociedades (SAS, SRL, SA) en Argentina. Escritas por contadores en CABA.',
+  canonical: `${SITE_URL}/guias`,
+  ogTitle: 'Guías contables e impositivas — Grande & Asociados',
+  ogDescription:
+    'Guías prácticas sobre monotributo, impuestos, honorarios y sociedades para PyMEs, comercios y monotributistas en CABA.',
+};
+
+// Metadata por guía -----------------------------------------------------------
+export function guiaSeo(guia) {
+  const canonical = `${SITE_URL}/guias/${guia.slug}`;
+  return {
+    title: guia.seoTitle || `${guia.titulo} | ${NOMBRE}`,
+    description: guia.seoDescription || guia.resumen,
+    canonical,
+    ogTitle: guia.titulo,
+    ogDescription: guia.resumen,
+    ogType: 'article',
+  };
+}
+
+// JSON-LD por guía: Article + BreadcrumbList + FAQPage + HowTo (si aplica).
+export function guiaJsonLd(guia) {
+  const url = `${SITE_URL}/guias/${guia.slug}`;
+  const bloques = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: guia.h1 || guia.titulo,
+      description: guia.resumen,
+      url,
+      mainEntityOfPage: url,
+      datePublished: guia.fechaPublicacion,
+      dateModified: guia.fechaActualizacion || guia.fechaPublicacion,
+      image: OG_IMAGE,
+      inLanguage: 'es-AR',
+      author: {
+        '@type': 'Person',
+        name: guia.autor?.nombre || NOMBRE,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: NOMBRE,
+        logo: { '@type': 'ImageObject', url: LOGO_IMAGE },
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Guías', item: `${SITE_URL}/guias` },
+        { '@type': 'ListItem', position: 3, name: guia.titulo, item: url },
+      ],
+    },
+  ];
+
+  // FAQPage si la guía tiene FAQs.
+  if (guia.faqs?.length) {
+    bloques.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: guia.faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.pregunta,
+        acceptedAnswer: { '@type': 'Answer', text: f.respuesta },
+      })),
+    });
+  }
+
+  // HowTo si la guía define un procedimiento (ej. recategorización).
+  if (guia.howTo?.pasos?.length) {
+    bloques.push({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: guia.howTo.nombre || guia.titulo,
+      step: guia.howTo.pasos.map((texto, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        text: texto,
+      })),
+    });
+  }
+
+  return bloques;
 }
 
 // JSON-LD ---------------------------------------------------------------------

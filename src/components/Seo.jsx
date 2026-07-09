@@ -4,7 +4,7 @@ import { OG_IMAGE } from '../seo';
 // Inyecta en el <head> del HTML prerenderizado (y en runtime) el título,
 // description, canonical, Open Graph, Twitter Card y JSON-LD de cada página.
 // `jsonLd` puede ser un objeto o un array de objetos schema.org.
-const Seo = ({ title, description, canonical, ogTitle, ogDescription, jsonLd }) => {
+const Seo = ({ title, description, canonical, ogTitle, ogDescription, ogType = 'website', jsonLd }) => {
   const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
   return (
     <Head>
@@ -16,7 +16,7 @@ const Seo = ({ title, description, canonical, ogTitle, ogDescription, jsonLd }) 
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={OG_IMAGE} />
       <meta property="og:locale" content="es_AR" />

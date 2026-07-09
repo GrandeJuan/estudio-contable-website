@@ -25,6 +25,7 @@ const Navbar = () => {
     { to: 'inicio', label: 'Inicio' },
     { to: 'sobre-nosotros', label: 'Sobre el Estudio' },
     { to: 'servicios', label: 'Servicios' },
+    { to: 'guias', label: 'Guías', route: true },
     { to: 'equipo', label: 'Equipo' },
     { to: 'contacto', label: 'Contacto' },
   ];
@@ -69,7 +70,15 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) =>
-              link.to === 'servicios' ? (
+              link.route ? (
+                <RouterLink
+                  key={link.to}
+                  to={`/${link.to}`}
+                  className="nav-link-underline cursor-pointer font-medium transition-colors text-[#1B2A4A] hover:text-[#D4A843]"
+                >
+                  {link.label}
+                </RouterLink>
+              ) : link.to === 'servicios' ? (
                 <div key={link.to} className="relative group">
                   {isServicePage ? (
                     <button
@@ -155,7 +164,16 @@ const Navbar = () => {
         {menuOpen && (
           <div id="mobile-menu" className="md:hidden mt-4 pb-4 space-y-3">
             {navLinks.map((link) =>
-              link.to === 'servicios' ? (
+              link.route ? (
+                <RouterLink
+                  key={link.to}
+                  to={`/${link.to}`}
+                  onClick={() => setMenuOpen(false)}
+                  className="block cursor-pointer font-medium transition-colors text-[#1B2A4A] hover:text-[#D4A843]"
+                >
+                  {link.label}
+                </RouterLink>
+              ) : link.to === 'servicios' ? (
                 <div key={link.to}>
                   {isServicePage ? (
                     <button
