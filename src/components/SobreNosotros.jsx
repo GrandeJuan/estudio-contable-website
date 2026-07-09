@@ -29,7 +29,7 @@ const SobreNosotros = () => {
           <ScrollReveal animation="fade-right">
             <div className="space-y-6">
               {contenido.sobreNosotros.parrafos.map((parrafo, index) => (
-                <p key={index} className="text-[#4A5568] leading-relaxed text-lg text-justify">
+                <p key={index} className="text-[#4A5568] leading-relaxed text-lg text-left md:text-justify">
                   {parrafo}
                 </p>
               ))}

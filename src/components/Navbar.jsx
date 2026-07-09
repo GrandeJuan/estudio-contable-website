@@ -69,8 +69,10 @@ const Navbar = () => {
               className="cursor-pointer flex items-center space-x-3"
             >
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt={contenido.estudio.nombre}
+                width={220}
+                height={162}
                 className="h-12 w-auto"
               />
             </a>
@@ -97,7 +99,7 @@ const Navbar = () => {
                       duration={500}
                       offset={-80}
                       className="nav-link-underline cursor-pointer font-medium transition-colors text-[#1B2A4A] hover:text-[#D4A843] flex items-center gap-1"
-                      activeClass="!text-[#D4A843] font-bold"
+                      activeClass="!text-[#1B2A4A] font-bold"
                     >
                       {link.label}
                       <FaChevronDown className="text-xs transition-transform group-hover:rotate-180" />
@@ -139,7 +141,7 @@ const Navbar = () => {
                   duration={500}
                   offset={-80}
                   className="nav-link-underline cursor-pointer font-medium transition-colors text-[#1B2A4A] hover:text-[#D4A843]"
-                  activeClass="!text-[#D4A843] font-bold"
+                  activeClass="!text-[#1B2A4A] font-bold"
                 >
                   {link.label}
                 </Link>
@@ -152,6 +154,9 @@ const Navbar = () => {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-2xl text-[#1B2A4A]"
+              aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -160,7 +165,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3">
+          <div id="mobile-menu" className="md:hidden mt-4 pb-4 space-y-3">
             {navLinks.map((link) =>
               link.to === 'servicios' ? (
                 <div key={link.to}>
@@ -180,7 +185,7 @@ const Navbar = () => {
                       offset={-80}
                       onClick={() => setMenuOpen(false)}
                       className="block cursor-pointer font-medium transition-colors text-[#1B2A4A] hover:text-[#D4A843]"
-                      activeClass="!text-[#D4A843] font-bold"
+                      activeClass="!text-[#1B2A4A] font-bold"
                     >
                       {link.label}
                     </Link>
@@ -220,7 +225,7 @@ const Navbar = () => {
                   offset={-80}
                   onClick={() => setMenuOpen(false)}
                   className="block cursor-pointer font-medium transition-colors text-[#1B2A4A] hover:text-[#D4A843]"
-                  activeClass="!text-[#D4A843] font-bold"
+                  activeClass="!text-[#1B2A4A] font-bold"
                 >
                   {link.label}
                 </Link>

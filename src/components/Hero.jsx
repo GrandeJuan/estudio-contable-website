@@ -25,9 +25,12 @@ const Hero = ({ onConsultar }) => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="hero-stagger hero-stagger-1 mb-6">
           <img
-            src="/images/logo-hero.png"
+            src="/images/logo-hero.webp"
             alt="Estudio Contable Grande & Asociados - Contadores Consultores"
-            className="mx-auto w-64 sm:w-80 md:w-96 lg:w-[28rem]"
+            width={900}
+            height={637}
+            fetchPriority="high"
+            className="mx-auto w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto"
           />
         </div>
         <h1 className="hero-stagger hero-stagger-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 md:mb-8 text-[#1B2A4A]">

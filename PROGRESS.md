@@ -43,6 +43,14 @@
 
 ## 📋 Pendiente
 - [ ] Diseñar logo y banner para el perfil de LinkedIn del estudio (`linkedin.com/company/grandeyasoc`)
+- [ ] **SEO estructural (alto impacto):** las páginas de servicio usan hash routing (`#/servicio/...`) y no se indexan como URLs propias; el sitemap lista URLs con `#` que Google ignora. Evaluar prerender estático (p. ej. `vite-react-ssg`) o rutas reales con rewrites en Vercel, para que cada servicio tenga su título/description/canonical. Requiere decisión sobre routing.
+
+### Completado recientemente (revisión de calidad):
+- [x] **Performance de imágenes:** hero `logo-hero.png` 492 KB → `logo-hero.webp` 51 KB; logo navbar/footer 238 KB → `logo.webp` 7 KB; fotos del equipo → WebP ~8 KB; PNGs de OG/JSON-LD/favicon reducidos. Se agregó `width`/`height` (anti-CLS), `fetchpriority` en el hero y `loading="lazy"` en imágenes bajo el pliegue. Eliminado `Logo.svg` huérfano.
+- [x] **Accesibilidad:** labels del formulario asociados (`htmlFor`/`id`), botón hamburguesa con `aria-label`/`aria-expanded`, modal con `role="dialog"`/`aria-modal`/`aria-labelledby` y foco inicial, alt más descriptivo en fotos del equipo.
+- [x] **Seguridad:** honeypot anti-spam en el formulario de consulta; `vercel.json` con headers (HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy) y cache de assets; `npm audit fix` (5 → 2 vulns, restantes requieren cambios breaking).
+- [x] **Armonía/diseño:** tokens de color unificados en `index.css` (un solo azul `#1B2A4A` y un solo dorado `#D4A843`; se eliminó la deriva de 3 dorados); `text-justify` solo en desktop (mejora lectura en mobile); estado activo del nav en azul (mejor contraste que el dorado).
+- [x] **Fixes:** coordenadas `geo` del JSON-LD corregidas a la dirección real; bug de scroll en "Ver todos los servicios" resuelto.
 
 ### Completado recientemente:
 - [x] ~~Configurar EmailJS~~ → funcionando con Gmail (`consultas.grandeyasoc@gmail.com`) + reenvío a `info@grandeyasoc.com.ar`

@@ -35,7 +35,7 @@ const FaqItem = ({ pregunta, respuesta, isOpen, onToggle }) => {
         className="overflow-hidden transition-all duration-400 ease-in-out"
       >
         <div className={`px-6 pb-5 border-t border-[#E8E6DF] transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
-          <p className="text-[#4A5568] leading-relaxed text-justify pt-4">{respuesta}</p>
+          <p className="text-[#4A5568] leading-relaxed text-left md:text-justify pt-4">{respuesta}</p>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
               <section>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#1B2A4A] mb-6">Descripción del Servicio</h2>
                 <div className="w-16 h-1 bg-[#D4A843] rounded mb-6"></div>
-                <p className="text-[#4A5568] text-lg leading-relaxed text-justify">
+                <p className="text-[#4A5568] text-lg leading-relaxed text-left md:text-justify">
                   {servicio.detalles.descripcionLarga}
                 </p>
               </section>
@@ -148,7 +148,7 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
                     {servicio.detalles.incluye.map((item, index) => (
                       <li key={index} className="flex items-start">
                         <FaCheckCircle className="text-[#D4A843] mt-1 mr-3 flex-shrink-0 text-lg" />
-                        <span className="text-[#4A5568] text-justify">{item}</span>
+                        <span className="text-[#4A5568] text-left md:text-justify">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -185,7 +185,7 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
                   <h3 className="text-2xl font-bold text-[#1B2A4A] mb-4">
                     ¿Necesitás este servicio?
                   </h3>
-                  <p className="text-[#4A5568] mb-6 text-justify">
+                  <p className="text-[#4A5568] mb-6 text-left md:text-justify">
                     Contactanos para recibir una cotización personalizada y sin compromiso.
                   </p>
 
@@ -222,9 +222,15 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
                       ))}
                   </ul>
                   <a
-                    href="#servicios"
-                    onClick={() => window.location.hash = '#'}
-                    className="inline-block mt-4 text-[#D4A843] hover:text-[#A8894F] font-semibold"
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.hash = '#';
+                      setTimeout(() => {
+                        document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }, 100);
+                    }}
+                    className="inline-block mt-4 text-[#A8894F] hover:text-[#1B2A4A] font-semibold"
                   >
                     Ver todos los servicios →
                   </a>
