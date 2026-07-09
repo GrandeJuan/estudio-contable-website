@@ -27,6 +27,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
     telefono: '',
     motivo: '',
     mensaje: '',
+    website: '', // honeypot anti-spam: debe quedar vacío
   });
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
@@ -58,6 +59,12 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Honeypot: si un bot completó el campo oculto, simulamos éxito sin enviar
+    if (formData.website) {
+      setEnviado(true);
+      return;
+    }
 
     if (!formData.nombre || !formData.email || !formData.motivo || !formData.mensaje) {
       setError('Por favor completá todos los campos obligatorios.');
@@ -102,7 +109,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
   };
 
   const resetForm = () => {
-    setFormData({ nombre: '', email: '', telefono: '', motivo: '', mensaje: '' });
+    setFormData({ nombre: '', email: '', telefono: '', motivo: '', mensaje: '', website: '' });
     setEnviado(false);
     setError('');
   };
@@ -124,6 +131,9 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
       {/* Modal */}
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="consulta-modal-title"
         className="relative bg-[#F5F5F0] rounded-t-xl sm:rounded-xl shadow-2xl w-full sm:max-w-lg max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
@@ -135,7 +145,7 @@ const ConsultaModal = ({ isOpen, onClose }) => {
           >
             <FaTimes className="text-xl" />
           </button>
-          <h2 className="text-2xl font-bold text-[#1B2A4A]">Hacenos tu consulta</h2>
+          <h2 id="consulta-modal-title" className="text-2xl font-bold text-[#1B2A4A]">Hacenos tu consulta</h2>
           <p className="text-[#4A5568] mt-1 text-sm">
             Completá el formulario y te respondemos a la brevedad.
           </p>
@@ -163,14 +173,28 @@ const ConsultaModal = ({ isOpen, onClose }) => {
           ) : (
             /* Formulario */
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Honeypot anti-spam (oculto para usuarios reales) */}
+              <input
+                type="text"
+                name="website"
+                value={formData.website}
+                onChange={handleChange}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute -left-[9999px] w-px h-px opacity-0"
+              />
+
               {/* Nombre */}
               <div>
-                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
+                <label htmlFor="c-nombre" className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Nombre completo *
                 </label>
                 <input
+                  id="c-nombre"
                   type="text"
                   name="nombre"
+                  autoFocus
                   value={formData.nombre}
                   onChange={handleChange}
                   placeholder="Tu nombre"
@@ -180,10 +204,11 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
+                <label htmlFor="c-email" className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Email *
                 </label>
                 <input
+                  id="c-email"
                   type="email"
                   name="email"
                   value={formData.email}
@@ -195,10 +220,11 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
               {/* Teléfono */}
               <div>
-                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
+                <label htmlFor="c-telefono" className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Teléfono <span className="text-[#4A5568] font-normal">(opcional)</span>
                 </label>
                 <input
+                  id="c-telefono"
                   type="tel"
                   name="telefono"
                   value={formData.telefono}
@@ -210,10 +236,11 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
               {/* Motivo */}
               <div>
-                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
+                <label htmlFor="c-motivo" className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Motivo de consulta *
                 </label>
                 <select
+                  id="c-motivo"
                   name="motivo"
                   value={formData.motivo}
                   onChange={handleChange}
@@ -230,10 +257,11 @@ const ConsultaModal = ({ isOpen, onClose }) => {
 
               {/* Mensaje */}
               <div>
-                <label className="block text-sm font-semibold text-[#1B2A4A] mb-1">
+                <label htmlFor="c-mensaje" className="block text-sm font-semibold text-[#1B2A4A] mb-1">
                   Tu consulta *
                 </label>
                 <textarea
+                  id="c-mensaje"
                   name="mensaje"
                   value={formData.mensaje}
                   onChange={handleChange}

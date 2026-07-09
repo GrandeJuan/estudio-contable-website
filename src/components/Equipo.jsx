@@ -36,7 +36,10 @@ const Equipo = () => {
                   {miembro.foto && (
                     <img
                       src={miembro.foto}
-                      alt={miembro.nombre}
+                      alt={`Foto de ${miembro.nombre}, ${miembro.cargo}`}
+                      width={520}
+                      height={362}
+                      loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover object-top z-10"
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />

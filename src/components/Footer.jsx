@@ -15,7 +15,7 @@ const Footer = () => {
             <h3 className="text-[#1B2A4A] text-lg font-semibold mb-4">
               {contenido.estudio.nombre}
             </h3>
-            <p className="text-[#4A5568] mb-4 text-justify">
+            <p className="text-[#4A5568] mb-4 text-left">
               {contenido.estudio.descripcionCorta}
             </p>
             <div className="flex justify-center space-x-4">
@@ -103,8 +103,11 @@ const Footer = () => {
         <div className="border-t border-[#D4A843] pt-8">
           <div className="flex justify-center mb-4">
             <img
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt={contenido.estudio.nombre}
+              width={220}
+              height={162}
+              loading="lazy"
               className="h-16 w-auto opacity-70"
             />
           </div>

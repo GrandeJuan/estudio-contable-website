@@ -4,14 +4,16 @@
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
   
-  /* Paleta de colores basada en el logo Grande & Asociados */
-  --color-primary: #2C3E65;      /* Azul marino oscuro - letra G del logo */
-  --color-primary-dark: #1A2847; /* Azul muy oscuro - degradados */
-  --color-accent: #8B95A5;       /* Gris plateado - anillos y subtítulos */
-  --color-cta: #C4A265;          /* Dorado arena - botones CTA */
-  --color-cta-dark: #A8894F;     /* Dorado oscuro - hover CTA */
-  --color-text-dark: #2B2B2B;    /* Negro/gris oscuro - texto principal */
-  --color-background: #F5F6F8;   /* Gris muy claro - fondos alternos */
+  /* Paleta única del sitio (fuente de verdad — coincide con CLAUDE.md) */
+  --color-primary: #1B2A4A;        /* Azul marino - títulos, iconos, botones */
+  --color-primary-light: #2C3E65;  /* Azul marino claro - hover/degradados */
+  --color-gold: #D4A843;           /* Dorado - líneas y detalles decorativos */
+  --color-gold-dark: #A8894F;      /* Dorado oscuro - hover sobre fondos claros */
+  --color-cream: #F5F5F0;          /* Crema - fondos de secciones y navbar */
+  --color-beige: #E8E6DF;          /* Beige - bordes y fondo de footer */
+  --color-beige-dark: #D9D5CC;     /* Beige oscuro - degradados/bordes */
+  --color-text: #4A5568;           /* Gris - texto secundario */
+  --color-text-dark: #2B2B2B;      /* Gris oscuro - texto de inputs */
 }
 
 /* Estilos personalizados */
@@ -98,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: var(--color-cta);
+  background-color: var(--color-gold);
   transition: width 0.3s ease;
 }
 
@@ -116,10 +118,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C4A265; /* Dorado arena - CTA */
+  background: #D4A843; /* Dorado - unificado con el resto del sitio */
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A8894F; /* Dorado oscuro - hover CTA */
+  background: #A8894F; /* Dorado oscuro - hover */
 }
