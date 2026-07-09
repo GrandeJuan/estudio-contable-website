@@ -13,9 +13,9 @@ const NOMBRE = contenido.estudio.nombre;
 // Metadata de la home ---------------------------------------------------------
 export const homeSeo = {
   title:
-    'Estudio Contable Grande & Asociados | Servicios Contables e Impositivos en Buenos Aires',
+    'Estudio Contable en CABA | Grande & Asociados — Contadores hace +30 años',
   description:
-    'Estudio contable con más de 30 años de experiencia. Servicios de contabilidad, liquidación de impuestos, sueldos y asesoría fiscal para empresas y particulares en Buenos Aires, Argentina.',
+    'Estudio contable en Av. Corrientes 1257, CABA. Contabilidad, impuestos (ARCA), sueldos, auditoría y sociedades para PyMEs, comercios y monotributistas. +30 años. Pedí una consulta.',
   canonical: `${SITE_URL}/`,
   ogTitle: NOMBRE,
   ogDescription:
@@ -26,10 +26,14 @@ export const homeSeo = {
 // Título y descripción únicos y optimizados para búsqueda por servicio.
 export function servicioSeo(servicio) {
   const canonical = `${SITE_URL}/servicio/${servicio.id}`;
-  const title = `${servicio.nombre} | ${NOMBRE}`;
-  const description = servicio.detalles?.descripcionLarga
-    ? servicio.detalles.descripcionLarga.slice(0, 155).replace(/\s+\S*$/, '') + '…'
-    : servicio.descripcion;
+  // Título/description con keyword local si el servicio los define; si no,
+  // fallback al patrón genérico derivado de contenido.js.
+  const title = servicio.seoTitle || `${servicio.nombre} | ${NOMBRE}`;
+  const description =
+    servicio.seoDescription ||
+    (servicio.detalles?.descripcionLarga
+      ? servicio.detalles.descripcionLarga.slice(0, 155).replace(/\s+\S*$/, '') + '…'
+      : servicio.descripcion);
   return {
     title,
     description,
@@ -62,7 +66,17 @@ export const accountingServiceJsonLd = {
   },
   geo: { '@type': 'GeoCoordinates', latitude: -34.60403, longitude: -58.3856 },
   openingHours: 'Mo-Fr 09:00-17:00',
-  sameAs: [contenido.estudio.redesSociales.linkedin],
+  priceRange: '$$',
+  knowsLanguage: 'es-AR',
+  areaServed: [
+    { '@type': 'City', name: 'Ciudad Autónoma de Buenos Aires' },
+    { '@type': 'AdministrativeArea', name: 'AMBA' },
+  ],
+  hasMap: contenido.estudio.googleMapsUrl,
+  sameAs: [
+    contenido.estudio.redesSociales.linkedin,
+    ...contenido.equipo.miembros.map((m) => m.linkedin).filter(Boolean),
+  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Servicios Contables',
@@ -73,7 +87,23 @@ export const accountingServiceJsonLd = {
   },
 };
 
-// Service + BreadcrumbList para cada página de servicio
+// FAQPage a partir de las FAQs del servicio (habilita rich result de FAQ y
+// hace las respuestas directamente extraíbles por los answer-engines).
+function faqPageJsonLd(servicio) {
+  const faqs = servicio.detalles?.faqs;
+  if (!faqs || faqs.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.pregunta,
+      acceptedAnswer: { '@type': 'Answer', text: f.respuesta },
+    })),
+  };
+}
+
+// Service + BreadcrumbList + FAQPage para cada página de servicio
 export function servicioJsonLd(servicio) {
   const url = `${SITE_URL}/servicio/${servicio.id}`;
   return [
@@ -107,5 +137,6 @@ export function servicioJsonLd(servicio) {
         { '@type': 'ListItem', position: 3, name: servicio.nombre, item: url },
       ],
     },
-  ];
+    faqPageJsonLd(servicio),
+  ].filter(Boolean);
 }

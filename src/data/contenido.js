@@ -54,6 +54,8 @@ export const contenido = {
       {
         id: "contabilidad-general",
         nombre: "Contabilidad General",
+        seoTitle: "Contabilidad para PyMEs en CABA | Estudio Contable Grande & Asociados",
+        seoDescription: "Contabilidad integral, balances y outsourcing contable para empresas y comercios en CABA. Información al día para decidir. +30 años de experiencia.",
         descripcion: "Asesoramiento contable integral, registraciones contables, outsourcing y copiado de libros contables.",
         icono: "FaCalculator",
         detalles: {
@@ -86,18 +88,20 @@ export const contenido = {
       {
         id: "liquidacion-impuestos",
         nombre: "Liquidación de Impuestos",
+        seoTitle: "Liquidación de Impuestos y Asesoría ARCA en CABA | Grande & Asociados",
+        seoDescription: "Liquidación de IVA, Ganancias, IIBB y Monotributo. Planificación fiscal y atención de fiscalizaciones ARCA (ex-AFIP) en CABA. Consultá con contadores.",
         descripcion: "Asesoramiento tributario integral, planificación fiscal y determinación de impuestos nacionales, provinciales y municipales.",
         icono: "FaFileInvoiceDollar",
         detalles: {
-          descripcionLarga: "Ofrecemos un servicio completo de asesoramiento tributario y liquidación de impuestos. Desde la planificación fiscal y la optimización de la carga tributaria hasta la determinación y presentación de impuestos en todos los niveles jurisdiccionales. Nos ocupamos de los regímenes de retención e información, la gestión del Monotributo, la atención de fiscalizaciones, el recupero de créditos fiscales vinculados a la exportación y el área contencioso tributario.",
+          descripcionLarga: "Ofrecemos un servicio completo de asesoramiento tributario y liquidación de impuestos. Desde la planificación fiscal y la optimización de la carga tributaria hasta la determinación y presentación de impuestos en todos los niveles jurisdiccionales. Nos ocupamos de los regímenes de retención e información, la gestión del Monotributo, la atención de fiscalizaciones de ARCA (ex-AFIP) y de los fiscos provinciales, el recupero de créditos fiscales vinculados a la exportación y el área contencioso tributario.",
           incluye: [
             "Asesoramiento tributario integral",
             "Planificación fiscal y optimización de la carga tributaria",
             "Determinación y presentación de impuestos nacionales, provinciales y municipales",
             "Gestión de regímenes de retención e información",
             "Informes para fines fiscales",
-            "Empadronamiento y recategorización de Monotributo",
-            "Atención de fiscalizaciones y requerimientos de los organismos de control",
+            "Empadronamiento y recategorización de Monotributo ante ARCA (ex-AFIP)",
+            "Atención de fiscalizaciones y requerimientos de ARCA (ex-AFIP) y demás organismos de control",
             "Recupero de créditos fiscales vinculados a la exportación",
             "Área contencioso tributario"
           ],
@@ -112,7 +116,7 @@ export const contenido = {
             },
             {
               pregunta: "¿Qué sucede si recibo una fiscalización o requerimiento de un organismo de control?",
-              respuesta: "Te acompañamos durante todo el proceso. Preparamos la documentación requerida, representamos tus intereses ante el organismo y elaboramos estrategias de defensa. También contamos con un área contencioso tributario para casos que requieran instancia administrativa o judicial."
+              respuesta: "Te acompañamos durante todo el proceso. Preparamos la documentación requerida, representamos tus intereses ante el organismo (ARCA —ex-AFIP—, Rentas provinciales u otros) y elaboramos estrategias de defensa. También contamos con un área contencioso tributario para casos que requieran instancia administrativa o judicial."
             }
           ]
         }
@@ -120,6 +124,8 @@ export const contenido = {
       {
         id: "liquidacion-sueldos",
         nombre: "Liquidación de Sueldos",
+        seoTitle: "Liquidación de Sueldos y Cargas Sociales en CABA | Grande & Asociados",
+        seoDescription: "Liquidación mensual de sueldos, recibos, cargas sociales y rúbrica bajo todos los convenios. Para PyMEs y comercios en CABA. Pedí presupuesto.",
         descripcion: "Liquidación mensual y quincenal de sueldos, emisión de recibos, cargas sociales y gestión de rúbrica.",
         icono: "FaUsers",
         detalles: {
@@ -150,6 +156,8 @@ export const contenido = {
       {
         id: "auditoria",
         nombre: "Auditoría",
+        seoTitle: "Auditoría de Estados Contables en CABA | Grande & Asociados",
+        seoDescription: "Auditoría y certificaciones bajo normas profesionales para bancos y organismos. Estados contables anuales e intermedios en CABA. Contadores matriculados.",
         descripcion: "Auditoría y preparación de estados contables, informes y certificaciones especiales bajo normas profesionales.",
         icono: "FaSearchDollar",
         detalles: {
@@ -178,19 +186,21 @@ export const contenido = {
       {
         id: "societario",
         nombre: "Societario",
-        descripcion: "Constitución de sociedades ante IGJ, presentación de estados contables y modificaciones societarias.",
+        seoTitle: "Constitución de Sociedades SRL, SA y SAS ante IGJ | Grande & Asociados",
+        seoDescription: "Constitución de SRL, SA, SAS y SAU ante IGJ, balances y modificaciones societarias en CABA. Te asesoramos qué sociedad te conviene. +30 años.",
+        descripcion: "Constitución de sociedades ante IGJ (SRL, SA, SAS, SAU), presentación de estados contables y modificaciones societarias.",
         icono: "FaBuilding",
         detalles: {
-          descripcionLarga: "Te acompañamos en todo lo relacionado con la gestión societaria de tu empresa. Desde la constitución de sociedades ante la IGJ (SA, SRL, SAU, entre otras) hasta la presentación de estados contables y la tramitación de modificaciones societarias. Nos encargamos de todos los trámites administrativos y legales para que tu sociedad funcione en regla.",
+          descripcionLarga: "Te acompañamos en todo lo relacionado con la gestión societaria de tu empresa. Desde la constitución de sociedades ante la IGJ (SRL, SA, SAS y SAU, entre otras) hasta la presentación de estados contables y la tramitación de modificaciones societarias. Nos encargamos de todos los trámites administrativos y legales para que tu sociedad funcione en regla.",
           incluye: [
-            "Constitución de sociedades ante IGJ (SA, SRL, SAU, etc.)",
+            "Constitución de sociedades ante IGJ (SRL, SA, SAS, SAU, etc.)",
             "Presentación de estados contables ante IGJ",
             "Modificaciones de sociedades (cambio de objeto, aumento de capital, cambio de domicilio, etc.)"
           ],
           faqs: [
             {
               pregunta: "¿Qué tipo de sociedad me conviene constituir?",
-              respuesta: "Depende de varios factores: cantidad de socios, capital disponible, responsabilidad patrimonial deseada y costos de mantenimiento. Las SRL ofrecen flexibilidad, las SA son ideales para grandes empresas o si pensás incorporar inversores, y las SAU permiten un único socio con responsabilidad limitada."
+              respuesta: "Depende de varios factores: cantidad de socios, capital disponible, responsabilidad patrimonial deseada y costos de mantenimiento. Las SRL ofrecen flexibilidad para PyMEs y negocios familiares; la SAS es ágil y de constitución más rápida y económica, muy elegida por emprendedores y startups; las SA son ideales para grandes empresas o si pensás incorporar inversores; y las SAU permiten un único socio con responsabilidad limitada. Te asesoramos para elegir la que mejor se adapte a tu proyecto."
             },
             {
               pregunta: "¿Cuánto tiempo lleva constituir una sociedad ante IGJ?",
