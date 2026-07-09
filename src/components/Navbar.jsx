@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { FaBars, FaTimes, FaChevronDown, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 
@@ -8,24 +9,16 @@ const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearc
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isServicePage, setIsServicePage] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isServicePage = location.pathname.startsWith('/servicio/');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
-    const handleHashChange = () => {
-      setIsServicePage(window.location.hash.startsWith('#/servicio/'));
-    };
-
-    handleHashChange();
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('hashchange', handleHashChange);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('hashchange', handleHashChange);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
@@ -36,17 +29,13 @@ const Navbar = () => {
     { to: 'contacto', label: 'Contacto' },
   ];
 
+  // Desde una página de servicio: volver a la home y hacer scroll a la sección.
   const handleNavClick = (sectionId) => {
     setMenuOpen(false);
-    if (isServicePage) {
-      window.location.hash = '#';
-      setTimeout(() => {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
   };
 
   return (
@@ -63,9 +52,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <a
-              href="#"
-              onClick={(e) => { e.preventDefault(); window.location.hash = '#'; }}
+            <RouterLink
+              to="/"
               className="cursor-pointer flex items-center space-x-3"
             >
               <img
@@ -75,7 +63,7 @@ const Navbar = () => {
                 height={162}
                 className="h-12 w-auto"
               />
-            </a>
+            </RouterLink>
           </div>
 
           {/* Desktop Navigation */}
@@ -92,7 +80,7 @@ const Navbar = () => {
                       <FaChevronDown className="text-xs transition-transform group-hover:rotate-180" />
                     </button>
                   ) : (
-                    <Link
+                    <ScrollLink
                       to={link.to}
                       spy={true}
                       smooth={true}
@@ -103,7 +91,7 @@ const Navbar = () => {
                     >
                       {link.label}
                       <FaChevronDown className="text-xs transition-transform group-hover:rotate-180" />
-                    </Link>
+                    </ScrollLink>
                   )}
                   {/* Dropdown */}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -111,14 +99,14 @@ const Navbar = () => {
                       {contenido.servicios.lista.map((servicio) => {
                         const Icono = iconos[servicio.icono] || FaCalculator;
                         return (
-                          <a
+                          <RouterLink
                             key={servicio.id}
-                            href={`#/servicio/${servicio.id}`}
+                            to={`/servicio/${servicio.id}`}
                             className="flex items-center gap-3 px-5 py-2.5 text-sm text-[#4A5568] hover:bg-[#F5F5F0] hover:text-[#D4A843] transition-colors"
                           >
                             <Icono className="text-[#1B2A4A]/70 flex-shrink-0" />
                             {servicio.nombre}
-                          </a>
+                          </RouterLink>
                         );
                       })}
                     </div>
@@ -133,7 +121,7 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ) : (
-                <Link
+                <ScrollLink
                   key={link.to}
                   to={link.to}
                   spy={true}
@@ -144,7 +132,7 @@ const Navbar = () => {
                   activeClass="!text-[#1B2A4A] font-bold"
                 >
                   {link.label}
-                </Link>
+                </ScrollLink>
               )
             )}
           </div>
@@ -177,7 +165,7 @@ const Navbar = () => {
                       {link.label}
                     </button>
                   ) : (
-                    <Link
+                    <ScrollLink
                       to={link.to}
                       spy={true}
                       smooth={true}
@@ -188,21 +176,21 @@ const Navbar = () => {
                       activeClass="!text-[#1B2A4A] font-bold"
                     >
                       {link.label}
-                    </Link>
+                    </ScrollLink>
                   )}
                   <div className="ml-4 mt-2 space-y-2 border-l-2 border-[#D4A843]/30 pl-3">
                     {contenido.servicios.lista.map((servicio) => {
                       const Icono = iconos[servicio.icono] || FaCalculator;
                       return (
-                        <a
+                        <RouterLink
                           key={servicio.id}
-                          href={`#/servicio/${servicio.id}`}
+                          to={`/servicio/${servicio.id}`}
                           onClick={() => setMenuOpen(false)}
                           className="flex items-center gap-2 text-sm text-[#4A5568] hover:text-[#D4A843] transition-colors"
                         >
                           <Icono className="text-[#1B2A4A]/70 flex-shrink-0 text-xs" />
                           {servicio.nombre}
-                        </a>
+                        </RouterLink>
                       );
                     })}
                   </div>
@@ -216,7 +204,7 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ) : (
-                <Link
+                <ScrollLink
                   key={link.to}
                   to={link.to}
                   spy={true}
@@ -228,7 +216,7 @@ const Navbar = () => {
                   activeClass="!text-[#1B2A4A] font-bold"
                 >
                   {link.label}
-                </Link>
+                </ScrollLink>
               )
             )}
           </div>

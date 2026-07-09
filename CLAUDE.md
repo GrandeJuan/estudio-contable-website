@@ -18,7 +18,8 @@ El objetivo es presentar el estudio, sus servicios y datos de contacto.
 
 - React 18 + Vite
 - Tailwind CSS (clases utilitarias, sin CSS custom salvo `index.css`)
-- Hash routing manual (sin React Router)
+- **Rutas reales por path con `react-router-dom`** (`/` y `/servicio/{id}`)
+- **Prerender estático (SSG) con `vite-react-ssg`**: `npm run build` genera un HTML por ruta
 - Sin backend, sin base de datos
 
 ---
@@ -29,7 +30,7 @@ El objetivo es presentar el estudio, sus servicios y datos de contacto.
 
 2. **No instalar librerías innecesarias** — el proyecto es intencionalmente simple y liviano.
 
-3. **No cambiar el sistema de routing hash** (`#/servicio/{id}`) sin consultar, ya que es necesario para que funcione correctamente en Vercel con Vite.
+3. **Routing = rutas reales por path + prerender (SSG).** Las páginas viven en `/` y `/servicio/{id}` (definidas en `src/routes.jsx`), y `vite-react-ssg` prerenderiza una por una en el build. Para navegar interno usar `<Link>`/`useNavigate` de `react-router-dom` (nunca `window.location.hash`). El scroll suave entre secciones de la home usa `react-scroll` (solo en la home). Si agregás una ruta nueva, asegurate de que quede prerenderizada (para rutas dinámicas, exportar `getStaticPaths`).
 
 4. **Tailwind primero** — usar clases de Tailwind para estilos. Evitar escribir CSS custom salvo casos excepcionales.
 
@@ -62,7 +63,10 @@ git push
 ## Estructura de componentes
 
 ```
-App.jsx → lee la URL hash y decide qué renderizar
+main.jsx → entry del SSG (ViteReactSSG) → routes.jsx
+  Layout.jsx → shell común (Navbar, Footer, modal, Outlet) + redirect de URLs viejas con hash
+  ├── pages/Home.jsx       → home (Hero, SobreNosotros, Servicios, Equipo, Contacto) + <Seo>
+  ├── pages/ServicioPage.jsx → /servicio/:id + <Seo> + getStaticPaths
   ├── Navbar.jsx        → navegación superior
   ├── Hero.jsx          → sección principal con CTA
   ├── SobreNosotros.jsx → historia y valores del estudio
@@ -102,14 +106,19 @@ App.jsx → lee la URL hash y decide qué renderizar
 ## SEO
 
 El SEO es parte fundamental del proyecto. Cualquier cambio debe mantener o mejorar el SEO existente.
+Cada página (home + 5 servicios) es una **URL real prerenderizada** con meta y contenido propios en el HTML.
 
-- **`index.html`** contiene: meta tags, Open Graph, Twitter Cards, JSON-LD (schema.org `AccountingService`), canonical URL
-- **`public/sitemap.xml`** — actualizar si se agregan o quitan páginas/servicios
-- **`public/robots.txt`** — directivas para crawlers
-- **H1** está en el Hero (slogan). No duplicar H1 en otras secciones
-- **Jerarquía**: H1 (Hero) → H2 (títulos de sección) → H3 (subtítulos)
+- **`src/seo.js`** — fuente única de `<title>`, `description`, canonical, OG/Twitter y JSON-LD por página (derivados de `contenido.js`). Si cambiás textos de servicios, la meta se actualiza sola.
+- **`src/components/Seo.jsx`** — inyecta esa meta en el `<head>` prerenderizado (componente `<Head>` de vite-react-ssg). NO poner meta por-página en `index.html` (generaría duplicados).
+- **`index.html`** — solo el shell (charset, viewport, favicon, fuentes, `keywords`).
+- **JSON-LD** — `AccountingService` en la home; `Service` + `BreadcrumbList` en cada servicio.
+- **`public/sitemap.xml`** — URLs reales (`/servicio/{id}`, sin `#`). Actualizar si se agregan/quitan servicios.
+- **`public/robots.txt`** — permite indexación y `/assets/`; apunta al sitemap.
+- **H1** está en el Hero (home) y en el header de cada página de servicio (uno por página).
+- **Jerarquía**: H1 → H2 (secciones) → H3 (subtítulos)
 - **Alt tags**: todas las imágenes deben tener texto alternativo descriptivo
 - **Dominio canónico**: `https://grandeyasociados.com.ar/`
+- **Verificar siempre** antes de dar por hecho un cambio de SEO: `npm run build` + `npm run preview` y confirmar que cada `/servicio/{id}` sirve su `<title>` y contenido únicos.
 
 ---
 

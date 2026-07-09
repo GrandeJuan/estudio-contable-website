@@ -1,8 +1,10 @@
 import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
 
 const Servicios = () => {
+  const navigate = useNavigate();
   const iconos = {
     FaCalculator,
     FaFileInvoiceDollar,
@@ -12,7 +14,7 @@ const Servicios = () => {
   };
 
   const handleServiceClick = (servicioId) => {
-    window.location.hash = `#/servicio/${servicioId}`;
+    navigate(`/servicio/${servicioId}`);
   };
 
   return (
