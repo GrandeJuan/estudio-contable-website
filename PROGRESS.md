@@ -45,6 +45,16 @@
 - [ ] Diseñar logo y banner para el perfil de LinkedIn del estudio (`linkedin.com/company/grandeyasoc`)
 - [ ] **Google Search Console:** reenviar/validar el nuevo `sitemap.xml` (URLs reales sin `#`) y pedir indexación de las 5 URLs `/servicio/{id}`.
 
+### Completado recientemente (SEO quick-wins — GEO/AI + schema + entidad):
+- [x] **`FAQPage` schema por servicio:** `faqPageJsonLd()` en `src/seo.js`, sumado al array de `servicioJsonLd()` con `.filter(Boolean)`. Los 5 servicios emiten ahora `FAQPage` en el HTML prerenderizado (habilita rich result de FAQ y hace las respuestas extraíbles por answer-engines).
+- [x] **JSON-LD `AccountingService` (home) enriquecido:** `priceRange`, `areaServed` (CABA + AMBA), `hasMap`, `knowsLanguage` y `sameAs` ampliado (LinkedIn del estudio + LinkedIn de los dos socios). NO se agregó `aggregateRating` (sin reseñas reales verificables).
+- [x] **AFIP → ARCA (ex-AFIP):** actualizado el copy del servicio de impuestos (descripción larga, "incluye" y FAQ) y el `<meta name="keywords">` de `index.html`. Se conserva el término "AFIP" (la gente todavía lo busca) usando la forma "ARCA (ex-AFIP)".
+- [x] **SAS en el servicio societario:** agregado a la descripción, `descripcionLarga`, "incluye" y la FAQ de "qué sociedad me conviene" (antes solo SA/SRL/SAU). Keywords y title incorporan SAS.
+- [x] **Titles/descriptions con keyword local:** campos opcionales `seoTitle`/`seoDescription` por servicio en `contenido.js`; `servicioSeo()` los usa con fallback al patrón genérico. `homeSeo` actualizado con señal local ("Estudio Contable en CABA…"). Ej. societario → "Constitución de Sociedades SRL, SA y SAS ante IGJ | Grande & Asociados".
+- [x] **`robots.txt` para IA + `llms.txt`:** `public/robots.txt` permite explícitamente GPTBot, OAI-SearchBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended y Applebot-Extended. Nuevo `public/llms.txt` con resumen de entidad, servicios y contacto (Vite lo copia al build).
+- [x] **Email canónico verificado (sin cambios):** `grep -rn` confirma que el repo usa consistentemente `info@grandeyasoc.com.ar` en todo el código; el `grandeyasociados` que aparece es siempre el **dominio** del sitio, no un email. No había mezcla real → no se tocó nada.
+- Gate: `npm run build` OK (6 páginas SSG). Smoke sobre `dist/`: `FAQPage` en los 5 servicios, "ARCA" y "SAS" presentes en el HTML prerenderizado, `dist/robots.txt` y `dist/llms.txt` con las directivas nuevas.
+
 ### Completado recientemente (SEO indexable):
 - [x] **SEO estructural (alto impacto) — RESUELTO:** se reemplazó el hash routing (`#/servicio/...`) por **rutas reales por path** (`/servicio/{id}`) con `react-router-dom`, y se agregó **prerender estático (SSG) con `vite-react-ssg`**. Ahora cada página (home + 5 servicios) se genera como HTML propio en el build, con su `<title>`, `description`, canonical, Open Graph, Twitter Card y JSON-LD únicos, y con el contenido del servicio ya presente en el HTML inicial (indexable sin ejecutar JS).
   - `sitemap.xml` reescrito con URLs reales (sin `#`); `robots.txt` deja de bloquear `/assets/`.
