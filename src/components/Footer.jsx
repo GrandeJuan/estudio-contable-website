@@ -1,4 +1,5 @@
 import { FaLinkedin, FaWhatsapp, FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { contenido } from '../data/contenido';
 
 const iconos = { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar };
@@ -50,13 +51,13 @@ const Footer = () => {
                 const Icono = iconos[servicio.icono] || FaCalculator;
                 return (
                   <li key={servicio.id}>
-                    <a
-                      href={`#/servicio/${servicio.id}`}
+                    <Link
+                      to={`/servicio/${servicio.id}`}
                       className="flex items-center gap-2 text-[#4A5568] hover:text-[#1B2A4A] transition-colors"
                     >
                       <Icono className="text-[#1B2A4A]/50 flex-shrink-0 w-3.5 h-3.5" />
                       {servicio.nombre}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

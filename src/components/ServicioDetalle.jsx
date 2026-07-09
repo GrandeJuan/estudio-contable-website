@@ -1,8 +1,17 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaChevronDown, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaClock } from 'react-icons/fa';
 import { FaCalculator, FaFileInvoiceDollar, FaUsers, FaBuilding, FaSearchDollar } from 'react-icons/fa';
 import { contenido } from '../data/contenido';
 import ScrollReveal from './ScrollReveal';
+
+// Navega a la home y hace scroll suave a la sección de servicios.
+const irAServicios = (navigate) => {
+  navigate('/');
+  setTimeout(() => {
+    document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
+};
 
 const FaqItem = ({ pregunta, respuesta, isOpen, onToggle }) => {
   const contentRef = useRef(null);
@@ -44,8 +53,14 @@ const FaqItem = ({ pregunta, respuesta, isOpen, onToggle }) => {
 
 const ServicioDetalle = ({ servicioId, onConsultar }) => {
   const [faqAbierto, setFaqAbierto] = useState(null);
+  const navigate = useNavigate();
 
   const servicio = contenido.servicios.lista.find(s => s.id === servicioId);
+
+  // Al cambiar de servicio (navegación prev/next), volver al tope.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [servicioId]);
 
   if (!servicio) {
     return (
@@ -53,7 +68,7 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
         <div className="text-center">
           <h2 className="text-3xl font-bold text-[#1B2A4A] mb-4">Servicio no encontrado</h2>
           <button
-            onClick={() => window.location.hash = '#'}
+            onClick={() => navigate('/')}
             className="bg-[#1B2A4A] text-white px-6 py-3 rounded-lg hover:bg-[#2C3E65] transition-colors"
           >
             Volver al inicio
@@ -93,20 +108,20 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
-            <a
-              href={`#/servicio/${prevServicio.id}`}
+            <Link
+              to={`/servicio/${prevServicio.id}`}
               className="flex items-center text-[#4A5568] hover:text-[#D4A843] transition-colors group"
             >
               <FaArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" />
               <span className="hidden sm:inline">{prevServicio.nombre}</span>
-            </a>
-            <a
-              href={`#/servicio/${nextServicio.id}`}
+            </Link>
+            <Link
+              to={`/servicio/${nextServicio.id}`}
               className="flex items-center text-[#4A5568] hover:text-[#D4A843] transition-colors group"
             >
               <span className="hidden sm:inline">{nextServicio.nombre}</span>
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6">
@@ -211,29 +226,22 @@ const ServicioDetalle = ({ servicioId, onConsultar }) => {
                       .slice(0, 4)
                       .map((otroServicio) => (
                         <li key={otroServicio.id}>
-                          <a
-                            href={`#/servicio/${otroServicio.id}`}
+                          <Link
+                            to={`/servicio/${otroServicio.id}`}
                             className="text-[#4A5568] hover:text-[#D4A843] transition-colors flex items-center"
                           >
                             <span className="w-2 h-2 bg-[#D4A843] rounded-full mr-3"></span>
                             {otroServicio.nombre}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                   </ul>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.hash = '#';
-                      setTimeout(() => {
-                        document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }, 100);
-                    }}
+                  <button
+                    onClick={() => irAServicios(navigate)}
                     className="inline-block mt-4 text-[#A8894F] hover:text-[#1B2A4A] font-semibold"
                   >
                     Ver todos los servicios →
-                  </a>
+                  </button>
                 </div>
               </ScrollReveal>
 

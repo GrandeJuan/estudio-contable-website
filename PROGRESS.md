@@ -43,7 +43,15 @@
 
 ## 📋 Pendiente
 - [ ] Diseñar logo y banner para el perfil de LinkedIn del estudio (`linkedin.com/company/grandeyasoc`)
-- [ ] **SEO estructural (alto impacto):** las páginas de servicio usan hash routing (`#/servicio/...`) y no se indexan como URLs propias; el sitemap lista URLs con `#` que Google ignora. Evaluar prerender estático (p. ej. `vite-react-ssg`) o rutas reales con rewrites en Vercel, para que cada servicio tenga su título/description/canonical. Requiere decisión sobre routing.
+- [ ] **Google Search Console:** reenviar/validar el nuevo `sitemap.xml` (URLs reales sin `#`) y pedir indexación de las 5 URLs `/servicio/{id}`.
+
+### Completado recientemente (SEO indexable):
+- [x] **SEO estructural (alto impacto) — RESUELTO:** se reemplazó el hash routing (`#/servicio/...`) por **rutas reales por path** (`/servicio/{id}`) con `react-router-dom`, y se agregó **prerender estático (SSG) con `vite-react-ssg`**. Ahora cada página (home + 5 servicios) se genera como HTML propio en el build, con su `<title>`, `description`, canonical, Open Graph, Twitter Card y JSON-LD únicos, y con el contenido del servicio ya presente en el HTML inicial (indexable sin ejecutar JS).
+  - `sitemap.xml` reescrito con URLs reales (sin `#`); `robots.txt` deja de bloquear `/assets/`.
+  - JSON-LD `AccountingService` en la home; `Service` + `BreadcrumbList` por servicio.
+  - Compatibilidad: las viejas URLs con hash redirigen por JS a la ruta real (no se pierden links).
+  - `vercel.json` extendido: `cleanUrls`, `trailingSlash: false` y fallback SPA (sin pisar el PR de quick-wins con los headers).
+  - Ver detalle en `DECISIONS.md`.
 
 ### Completado recientemente (revisión de calidad):
 - [x] **Performance de imágenes:** hero `logo-hero.png` 492 KB → `logo-hero.webp` 51 KB; logo navbar/footer 238 KB → `logo.webp` 7 KB; fotos del equipo → WebP ~8 KB; PNGs de OG/JSON-LD/favicon reducidos. Se agregó `width`/`height` (anti-CLS), `fetchpriority` en el hero y `loading="lazy"` en imágenes bajo el pliegue. Eliminado `Logo.svg` huérfano.
@@ -77,14 +85,15 @@
 El SEO es una parte clave del proyecto. Sin él, Google no indexa la página y nadie la encuentra.
 
 ### Implementado en el código:
-- **Meta tags** — title, description, keywords en `index.html`
-- **Open Graph** — og:title, og:description, og:image, og:url, og:locale, og:site_name
-- **Twitter Cards** — summary_large_image con imagen y descripción
-- **JSON-LD** (schema.org) — tipo `AccountingService` con datos del negocio, dirección, teléfono, email, horarios, servicios ofrecidos y LinkedIn
-- **Canonical URL** — apunta a `https://grandeyasociados.com.ar/`
+- **Prerender estático (SSG)** — `vite-react-ssg` genera un HTML por ruta en el build; el contenido y la meta viven en el HTML servido (indexable sin ejecutar JS)
+- **Rutas reales** — `/` (home) y `/servicio/{id}` (una por servicio) con `react-router-dom`
+- **Meta tags por página** — `<title>` y `description` únicos por servicio, generados desde `contenido.js` (ver `src/seo.js` y `src/components/Seo.jsx`)
+- **Open Graph / Twitter Cards por página** — og/twitter title, description, image, url específicos de cada servicio
+- **JSON-LD** (schema.org) — `AccountingService` en la home; `Service` + `BreadcrumbList` en cada página de servicio
+- **Canonical URL por página** — home → `/`, servicios → `/servicio/{id}` (sin `#`)
 - **Robots meta** — `index, follow`
-- **sitemap.xml** — homepage + 5 páginas de servicios
-- **robots.txt** — permite indexación, apunta al sitemap
+- **sitemap.xml** — homepage + 5 páginas de servicios con URLs reales (sin `#`)
+- **robots.txt** — permite indexación (incluye `/assets/` para que Google renderice), apunta al sitemap
 - **H1 correcto** — el slogan del Hero es el `<h1>` de la página
 - **Jerarquía de headings** — H1 → H2 (secciones) → H3 (subsecciones)
 - **HTML semántico** — `<nav>`, `<main>`, `<section>`, `<footer>`
@@ -96,9 +105,14 @@ El SEO es una parte clave del proyecto. Sin él, Google no indexa la página y n
 - [x] Dominio `grandeyasociados.com.ar` activo y propagado
 
 ### Archivos relacionados:
-- `index.html` — meta tags, Open Graph, Twitter Cards, JSON-LD
-- `public/sitemap.xml` — mapa del sitio
+- `src/seo.js` — fuente única de títulos, descriptions, canonical y JSON-LD por página
+- `src/components/Seo.jsx` — inyecta la meta en el `<head>` prerenderizado (usa el `<Head>` de vite-react-ssg)
+- `src/routes.jsx` / `src/main.jsx` — definición de rutas y entry del SSG
+- `src/pages/ServicioPage.jsx` — página de servicio + `getStaticPaths()` (enumera los servicios)
+- `index.html` — shell mínimo (charset, viewport, favicon, fuentes); la meta es por-página
+- `public/sitemap.xml` — mapa del sitio (URLs reales)
 - `public/robots.txt` — directivas para crawlers
+- `vercel.json` — `cleanUrls`, `trailingSlash`, headers y fallback SPA
 
 ---
 
@@ -106,8 +120,9 @@ El SEO es una parte clave del proyecto. Sin él, Google no indexa la página y n
 
 | Decisión | Motivo |
 |----------|--------|
-| Vite en lugar de Next.js | Proyecto estático simple, sin necesidad de SSR |
-| Hash routing en lugar de React Router | Funciona sin configuración especial en Vercel con Vite |
+| Vite en lugar de Next.js | Proyecto estático simple, sin necesidad de SSR (Next queda para el portal de clientes) |
+| Rutas reales por path + prerender estático (`vite-react-ssg` + `react-router-dom`) | El hash routing no era indexable por Google; ahora cada servicio es una URL real con meta y contenido propios en el HTML. Ver `DECISIONS.md` (2026-07-09) |
+| ~~Hash routing en lugar de React Router~~ (reemplazado) | Era simple pero no indexable; Juan aprobó el cambio |
 | Contenido centralizado en `contenido.js` | Facilita ediciones sin tocar componentes |
 | Vercel como hosting | Deploy automático desde GitHub, gratuito, sin configuración |
 | DNS delegados a Vercel desde NIC.ar | Permite manejar dominio `.com.ar` directamente desde Vercel |

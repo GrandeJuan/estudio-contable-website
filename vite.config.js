@@ -8,4 +8,10 @@ export default defineConfig({
     tailwindcss(),
   ],
   base: '/',
+  // Prerender estático (SSG). Cada ruta se genera como carpeta/index.html
+  // para servir URLs limpias (/servicio/{id}) en Vercel.
+  ssgOptions: {
+    dirStyle: 'nested',
+    formatting: 'minify',
+  },
 })
